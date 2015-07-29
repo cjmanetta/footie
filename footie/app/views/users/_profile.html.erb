@@ -5,7 +5,6 @@
 <p>
   user age
 </p>
-<% if @user.admin == true %>
-  <%= link_to 'edit', user_path(@user) %>
-<% end %>
+
+<%= link_to 'edit', user_path(@user) %>
 

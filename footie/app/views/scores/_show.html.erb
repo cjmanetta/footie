@@ -1,0 +1,15 @@
+<article>
+  <h4>
+    <span>
+      <%= @score.user.firstname %>
+    </span> |
+    <span>
+      <%= @score.activity.title %>
+    </span> |
+    <span>
+      <%= @score.value %>
+    </span>
+  </h4>
+
+</article>
+<%= link_to 'delete', score_path(@score), method: :delete %>

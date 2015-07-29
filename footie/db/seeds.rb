@@ -25,23 +25,26 @@ User.create(
   username:"ddelaviz",
   password: "1234")
 
-# activity_array = ["Challenge", "Game", "Practice"]
+  Activity.create(
+    title: "Ronaldo Chop",
+    description: "2pts at speed",
+    date: Faker::Date.forward(60),
+    activity_type: "Challenge")
 
-# 5.times do
-#   Activity.create(
-#     title: Faker::Lorem.words(2).join(' '),
-#     description: Faker::Lorem.sentence,
-#     date: Faker::Date.forward(60),
-#     activity_type: activity_array.sample)
-# end
+  Activity.create(
+    title: "Juggling",
+    description: "4pts per juggle",
+    date: Faker::Date.forward(60),
+    activity_type: "Challenge")
 
-# players = User.where("admin = false")
+  Activity.create(
+    title: "Maradona",
+    description: "5pts at speed",
+    date: Faker::Date.forward(60),
+    activity_type: "Challenge")
 
-# players.each do |player|
-#   5.times do
-#     Score.create(
-#       value: rand(0..5),
-#       user_id: player.id,
-#       activity_id: rand(1..5))
-#   end
-# end
+  Activity.create(
+    title: "Headers",
+    description: "2pts for each one",
+    date: Faker::Date.forward(60),
+    activity_type: "Challenge")

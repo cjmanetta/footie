@@ -1,0 +1,11 @@
+<h1>profile</h1>
+<p>
+  <%= @user.firstname %> <%= @user.firstname %>
+</p>
+<p>
+  user age
+</p>
+<% if @user.admin == true %>
+  <%= link_to 'edit', user_path(@user) %>
+<% end %>
+

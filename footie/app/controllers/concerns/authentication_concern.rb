@@ -19,6 +19,4 @@ module AuthenticationConcern
   def logged_in?
     !!current_user
   end
-
-
-  end
+end

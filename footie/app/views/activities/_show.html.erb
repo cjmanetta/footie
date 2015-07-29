@@ -1,0 +1,14 @@
+<article>
+  <h4>
+    <span>
+      <%= @activity.title %>
+    </span> |
+    <span>
+      <%= @activity.date %>
+    </span>
+  </h4>
+  <p>
+    <%= @activity.description %>
+  </p>
+</article>
+<%= link_to 'delete', activity_path(@activity), method: :delete %>

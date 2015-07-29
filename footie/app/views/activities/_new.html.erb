@@ -1,0 +1,7 @@
+<%= form_for :activity, url: activities_path do |f| %>
+  <%= f.hidden_field :activity_type, value: 'Challenge' %>
+  <%= f.text_field :title, placeholder: 'challenge name' %>
+  <%= f.text_field :description, placeholder: 'challenge description' %>
+  <%= f.date_field :date %>
+  <%= f.submit %>
+<% end %>

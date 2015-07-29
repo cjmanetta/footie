@@ -5,8 +5,11 @@ class ActivitiesController < ApplicationController
   end
 
   def new
-    # @activity = Activity.new dont need this until i show validation errors to user
-    render '_new'
+    @activity = Activity.new
+  end
+
+  def edit
+    @activity = Activity.find(params[:id])
   end
 
   def create
@@ -14,7 +17,16 @@ class ActivitiesController < ApplicationController
     if @activity.save
       redirect_to '/'
     else
-      render '_new'
+      render 'new'
+    end
+  end
+
+  def update
+    @activity = Activity.find(params[:id])
+    if @activity.update(activity_params)
+      redirect_to @activity
+    else
+      render 'edit'
     end
   end
 
@@ -31,3 +43,5 @@ class ActivitiesController < ApplicationController
   end
 
 end
+
+

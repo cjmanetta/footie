@@ -1,4 +1,9 @@
 class ActivitiesController < ApplicationController
+
+  def index
+    @activities = Activities.all
+  end
+
   def show
     @activity = Activity.find(params[:id])
     render '_show'
@@ -15,7 +20,7 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.new(activity_params)
     if @activity.save
-      redirect_to '/'
+      redirect_to root_path
     else
       render 'new'
     end

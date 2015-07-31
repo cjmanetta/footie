@@ -1,14 +1,7 @@
 <h2>scoreboard</h2>
 <ul id="scoreboard-listing">
 
-  <% @players.each do |player| %>
-  <%# @scores %>
-
-
-
-      <li><a href= '#'><%= player.firstname %></a> | <%# player.total_score %></span></li>
-    <% end %>
-  </ul>
-
-
-  <!-- <span id="player_score<%# player.id %>" -->
+  <% @players.sort_by{|p| p.total_score}.reverse.each do |player| %>
+      <li><a href= '#'><%= player.firstname %></a> | <%= player.total_score %></span></li>
+  <% end %>
+</ul>

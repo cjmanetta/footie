@@ -1,0 +1,8 @@
+<% @activities.sort_by{|a| a.date}.each do |activity| %>
+  <h4><%= activity.title %> | <%= activity.date %> </h4>
+  <p><%= activity.description %></p>
+  <button>edit</button>
+<!-- not working "couldnt find activity with id=11" -->
+  <%= link_to 'delete', activity_path, method: :delete %>
+<% end %>
+

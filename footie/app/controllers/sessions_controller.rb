@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       login_user(@user)
       redirect_to @user
     else
-      redirect_to '/'
+      redirect_to root_path
     end
   end
 

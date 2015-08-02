@@ -1,7 +1,17 @@
-<h1>coaches dashboard</h1>
-<%= render partial: 'profile' %>
-<%= render partial: 'users/coaches/scoreboard' %>
-<%= render partial: 'scores/form' %>
-<%= render partial: 'activities/index' %>
+<div class="dashboard">
+  <section class="scores row">
 
-<%= link_to 'logout', logout_path, method: :delete %>
+    <div class="new-score small-6 columns">
+      <%= render partial: 'scores/form' %>
+    </div>
+  </section>
+  <section class="activities row">
+    <div class="activity-listing medium small-8 columns">
+      <%= render partial: 'activities/index' %>
+    </div>
+    <div class="teamsnap-sched small-4 columns">
+      <h2>teamsnap sched will go here</h2>
+    </div>
+  </section>
+</div>
+

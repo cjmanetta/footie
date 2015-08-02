@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Footie</title>
-  <%= stylesheet_link_tag    'application', media: 'all'%>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-<%= yield %>
-<%= javascript_include_tag 'application'%>
-</body>
+    <%= stylesheet_link_tag    "application" %>
+
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= render partial: 'layouts/nav' %>
+    <%= yield %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  </body>
 </html>

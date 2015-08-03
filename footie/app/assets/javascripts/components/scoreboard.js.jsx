@@ -3,9 +3,6 @@ var Scoreboard = React.createClass({
     return { scores: this.props.initialScores };
   },
 
-  handleScoreSubmit: function(score) {
-    var c
-  }
   render: function() {
     var scores = this.state.scores.map(function(score) {
       return <Score key={score.id} score={score} />

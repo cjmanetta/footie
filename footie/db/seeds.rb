@@ -1,14 +1,49 @@
 
-10.times do
-  User.create(
-    firstname: Faker::Name.first_name,
-    lastname: Faker::Name.last_name,
-    username: Faker::Internet.user_name,
-    birthdate: Faker::Date.backward(1000),
-    email: Faker::Internet.email,
-    password: "1234")
-end
+# 10.times do
+#   User.create(
+#     firstname: Faker::Name.first_name,
+#     lastname: Faker::Name.last_name,
+#     username: Faker::Internet.user_name,
+#     birthdate: Faker::Date.backward(1000),
+#     email: Faker::Internet.email,
+#     password: "1234")
+# end
 
+
+# players
+User.create(
+  admin: false,
+  firstname: "Anni",
+  lastname: "Coss",
+  birthdate: Date.parse('2003-10-20'),
+  username:"acoss",
+  password: "1234")
+
+User.create(
+  admin: false,
+  firstname: "Arista",
+  lastname: "Vasquez",
+  birthdate: Date.parse('2004-12-15'),
+  username:"avasquez",
+  password: "1234")
+
+User.create(
+  admin: false,
+  firstname: "Carli",
+  lastname: "Smith",
+  birthdate: Date.parse('2003-08-02'),
+  username:"csmith",
+  password: "1234")
+
+User.create(
+  admin: false,
+  firstname: "Haley",
+  lastname: "Dolin",
+  birthdate: Date.parse('2004-01-12'),
+  username:"hdolin",
+  password: "1234")
+
+# coaches
 User.create(
   admin: true,
   firstname: "Charlotte",

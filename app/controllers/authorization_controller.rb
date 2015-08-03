@@ -5,7 +5,8 @@ class AuthorizationController < ApplicationController
 
 
   def initiate_oauth
-    redirect_to "https://auth.teamsnap.com/oauth/authorize?client_id=#{ENV['CLIENT_ID']}&redirect_uri=#{ENV['REDIRECT_URI_1']}&response_type=#{ENV['RESPONSE_TYPE']}"
+    redirect_uri = "http://localhost:3000/oauth/exchange"
+    redirect_to "https://auth.teamsnap.com/oauth/authorize?client_id=#{ENV['CLIENT_ID']}&redirect_uri=#{redirect_uri}&response_type=code"
   end
 
   def exchange_oauth

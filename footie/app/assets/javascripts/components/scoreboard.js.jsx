@@ -1,9 +1,21 @@
 var Scoreboard = React.createClass({
+  getInitialState: function() {
+    return { scores: this.props.initialScores };
+  },
 
+  handleScoreSubmit: function(score) {
+    var c
+  }
   render: function() {
+    var scores = this.state.scores.map(function(score) {
+      return <Score key={score.id} score={score} />
+    });
+
     return (
       <div className="scoreboard small-6 columns">
-        {this.props.initialScores}
+      <ul>
+        <li>{scores}</li>
+      </ul>
       </div>
     );
   }
@@ -11,9 +23,7 @@ var Scoreboard = React.createClass({
 
 
 
-
-
 React.render(
   <Scoreboard />,
-  $('.scores')
+  document.querySelector('.scores')
   )

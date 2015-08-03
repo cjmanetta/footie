@@ -1,1 +1,1 @@
-# footie-rails
+# footie

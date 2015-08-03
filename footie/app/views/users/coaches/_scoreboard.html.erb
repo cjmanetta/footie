@@ -1,7 +1,3 @@
 <h2>scoreboard</h2>
-<ul id="scoreboard-listing">
 
-  <% @players.sort_by{|p| p.total_score}.reverse.each do |player| %>
-      <li><a href= '#'><%= player.firstname %></a> | <%= player.total_score %></span></li>
-  <% end %>
-</ul>
+<%= react_component 'Scoreboard', { initialScores: @totals_array } %>

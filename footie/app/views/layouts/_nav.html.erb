@@ -1,0 +1,14 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">footie</a></h1>
+    </li>
+  </ul>
+  <ul class="right">
+    <li>
+      <% if current_user %>
+        <%= link_to 'logout', logout_path, method: :delete, class: "button radius" %>
+      <% end %>
+    </li>
+  </ul>
+</nav>

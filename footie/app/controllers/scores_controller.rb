@@ -16,7 +16,7 @@ class ScoresController < ApplicationController
     @score = Score.new(score_params)
 
     if @score.save
-      redirect_to '/'
+      redirect_to user_path(current_user)
     else
       render 'new'
     end

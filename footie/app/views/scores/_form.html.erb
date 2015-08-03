@@ -1,7 +1,25 @@
 <%= form_for @score do |f| %>
-  <%= f.collection_select(:activity_id, Activity.challenges, :id, :title) %>
-  <%= f.collection_select(:user_id, User.players, :id, :firstname) %>
-  <%= f.number_field :value, placeholder: 'points' %>
-
-  <%= f.submit value: 'submit' %>
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>add a score</h2>
+      <%= f.collection_select(:activity_id, Activity.challenges, :id, :title) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <%= f.collection_select(:user_id, User.players, :id, :firstname) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row collapse postfix-radius">
+        <div class="medium-9 small-12 columns">
+          <%= f.number_field :value, placeholder: 'points' %>
+        </div>
+        <div class="medium-3 small-12 columns">
+          <%= f.submit value: 'submit', class: "button postfix" %>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>

@@ -13,6 +13,7 @@ class UsersController < ApplicationController
       player_hash = {"firstname" => @players[index].firstname, "score" => @total_scores[index]  }
       @totals_array << player_hash
     end
+    render json: {totals_array: @totals_array}
 
     if @user.admin == true
       render 'users/coaches/dashboard'
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
       render 'users/players/dashboard'
     end
   end
+
 
   def index
     players = User.players.all

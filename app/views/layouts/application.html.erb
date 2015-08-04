@@ -9,12 +9,13 @@
     <%= stylesheet_link_tag    "application" %>
 
     <%= csrf_meta_tags %>
+     <%= javascript_include_tag "vendor/modernizr" %>
+
   </head>
 
   <body>
     <%= render partial: 'layouts/nav' %>
     <%= yield %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application"%>
   </body>
 </html>

@@ -4,7 +4,6 @@ var Scoreboard = React.createClass({
   },
 
   render: function() {
-
     var scores = this.state.scores.map(function(score) {
       return <Score key={score.id} score={score} />
     });

@@ -1,41 +1,13 @@
-<div class="scoreboard small-6 columns">
-      <%= render partial: 'users/coaches/scoreboard' %>
-    </div>
-
-<h2>scoreboard</h2>
-<ul id="scoreboard-listing">
-
-  <% @players.sort_by{|p| p.total_score}.reverse.each do |player| %>
-      <li><a href= '#'><%= player.firstname %></a> | <%= player.total_score %></span></li>
-  <% end %>
-</ul>
-
-
-//didnt work
-var ScoreListing = React.createClass({
-  render: function() {
-    var nodes = this.props.data.map(function (player) {
-      return (
-        {player.firstname}
-      );
-    };
-    return (
-      <div>
-        {nodes}
-      </div>
-    );
-  }
-});
-___________________________________________________________
-
-
-  render: function() {
-    var scores = this.state.scores.map(function(score) {
-        return <Score key={score.id} score={score} />
-    });
-    return (
-      <div>
-        {scores}
-      </div>
-    );
-  }
+  // loadChallengesFromServer: function() {
+  //   $.ajax({
+  //     url: '/activities',
+  //     dataType: 'json'
+  //     type:'get'
+  //     success: function(data) {
+  //       this.setState({activities: activities});
+  //     }.bind(this),
+  //     error: function(xhr, status, err) {
+  //       console.error('/activities', status, err.toString());
+  //     }.bind(this)
+  //   });
+  // },

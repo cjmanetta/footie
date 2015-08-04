@@ -7,11 +7,12 @@ Rails.application.routes.draw do
 
   scope constraints: ACCEPTS_JSON do
     resources :scores, except: [:index]
+    resources :activities
+    resources :users, only: [:index]
   end
 
-  get 'scores#*', to: 'home#index'
   resources :users, only: [:show]
-  resources :activities
+  get 'scores#*', to: 'home#index'
   # resources :scores, except: [:index]
 
   post '/login', to: 'sessions#create'

@@ -14,13 +14,16 @@ class UsersController < ApplicationController
       @totals_array << player_hash
     end
 
-
-
     if @user.admin == true
       render 'users/coaches/dashboard'
     else
       render 'users/players/dashboard'
     end
+  end
+
+  def index
+    players = User.players.all
+    render json: players
   end
 end
 

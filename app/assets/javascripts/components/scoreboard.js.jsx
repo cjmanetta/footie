@@ -15,20 +15,9 @@ var Scoreboard = React.createClass({
         <ul>
           <li>{scores}</li>
         </ul>
-        <ScoreForm scores={scores}/>
       </div>
     );
   },
-});
-
-
-var ScoreForm = React.createClass({
-
-  render: function() {
-    return (
-      null
-    );
-  }
 });
 
 

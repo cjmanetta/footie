@@ -1,7 +1,9 @@
 var ChallengeSelector = React.createClass ({
 
   getInitialState: function() {
-    return {challenges: []};
+    return {
+      challenges: []
+    };
   },
 
   componentDidMount: function() {
@@ -21,7 +23,7 @@ var ChallengeSelector = React.createClass ({
 
   render: function() {
     var challenge_options = this.state.challenges.map(function (challenge) {
-        return <option value={challenge}>{challenge}</option>
+        return <option value={challenge.id}>{challenge.title}</option>
     })
     return(
       <select>
@@ -32,7 +34,3 @@ var ChallengeSelector = React.createClass ({
 
 });
 
-React.render(
-  <ChallengeSelector />,
-  document.querySelector('.new-score')
-  )

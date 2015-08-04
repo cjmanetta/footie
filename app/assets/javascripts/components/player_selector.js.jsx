@@ -6,6 +6,11 @@ var PlayerSelector = React.createClass ({
     };
   },
 
+  passInfo: function() {
+    var player = React.findDOMNode(this.refs.player).value;
+    this.props.input(player)
+  },
+
   componentDidMount: function() {
     $.ajax({
       url: '/users',
@@ -23,10 +28,10 @@ var PlayerSelector = React.createClass ({
 
   render: function() {
     var player_options = this.state.players.map(function (player) {
-        return <option value={player.firstname}>{player.firstname}</option>
+        return <option value={player.id}>{player.firstname}</option>
     })
     return(
-      <select>
+      <select ref="player" onChange={this.passInfo}>
         {player_options}
       </select>
     );

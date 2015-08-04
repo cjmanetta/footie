@@ -6,6 +6,11 @@ var ChallengeSelector = React.createClass ({
     };
   },
 
+  passInfo: function () {
+    var challenge = React.findDOMNode(this.refs.challenge).value;
+    this.props.input(challenge);
+  },
+
   componentDidMount: function() {
     $.ajax({
       url: '/activities',
@@ -26,7 +31,7 @@ var ChallengeSelector = React.createClass ({
         return <option value={challenge.id}>{challenge.title}</option>
     })
     return(
-      <select>
+      <select ref="challenge" onChange={this.passInfo}>
         {challenge_options}
       </select>
     );

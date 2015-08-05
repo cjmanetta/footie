@@ -1,6 +1,26 @@
-<h1>Login</h1>
 <%= form_tag '/login' do -%>
- <%= text_field_tag :username %>
- <%= password_field_tag :password %>
- <%= submit_tag 'login', class: "button" %>
+<div class="row">
+  <div class="login small-6 large-centered columns">
+    <h2>login</h2>
+      <div class="row collapse prefix-radius">
+        <div class="medium-12 small-12 columns">
+          <%= text_field_tag :username, nil,  class: "rounded", placeholder: "username"  %>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="login small-6 large-centered columns">
+    <div class="row collapse postfix-radius">
+        <div class="medium-9 small-12 columns">
+          <%= password_field_tag :password %>
+        </div>
+        <div class="medium-3 small-12 columns">
+          <%= submit_tag 'login', class: "button tiny postfix radius" %>
+        </div>
+    </div>
+  </div>
+</div>
 <% end %>

@@ -61,3 +61,8 @@ li {
   background-color: $first-color;
 }
 
+form button:link, form button:hover {
+  border: none;
+  background-color: $first-color;
+
+}

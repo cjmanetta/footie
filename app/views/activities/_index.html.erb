@@ -1,8 +1,18 @@
+
 <% @activities.sort_by{|a| a.date}.each do |activity| %>
-  <h4><%= activity.title %> | <%= activity.date %> </h4>
-  <p><%= activity.description %></p>
-  <button class="button radius">edit</button>
-<!-- not working "couldnt find activity with id=11" -->
-  <%= link_to 'delete', activity_path, method: :delete %>
+  <div class="panel-container small-12 small centered columns">
+    <div class="panel">
+      <h5>
+        <%= activity.title %>
+        <span>
+          <%= link_to '', activity_path, method: :put, class: "fa fa-pencil"  %>
+          <%= link_to '', activity_path, method: :delete, class: "fa fa-trash-o"  %>
+        </span>
+      </h5>
+      <p><%= parse_date(activity.date) %></p>
+      <p><%= activity.description %></p>
+    </div>
+  </div>
 <% end %>
 
+<!-- not working "couldnt find activity with id=11" -->

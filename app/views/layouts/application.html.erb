@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>footie</title>
+    <%= include_gon %>
+    <%= stylesheet_link_tag "http://cdn.foundation5.zurb.com/foundation.css" %>
 
     <%= stylesheet_link_tag    "application" %>
 
     <%= csrf_meta_tags %>
+
   </head>
 
   <body>
     <%= render partial: 'layouts/nav' %>
     <%= yield %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application"%>
   </body>
 </html>

@@ -14,12 +14,20 @@ class UsersController < ApplicationController
       @totals_array << player_hash
     end
 
-    if @user.admin == true
-      render 'users/coaches/dashboard'
+    gon.user_id = @user.id
+
+
+    if request.xhr?
+      render json: { scores: @totals_array }
     else
-      render 'users/players/dashboard'
+      if @user.admin == true
+        render 'users/coaches/dashboard'
+      else
+        render 'users/players/dashboard'
+      end
     end
   end
+
 
   def index
     players = User.players.all

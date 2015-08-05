@@ -12,11 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
 //= require react
 //= require react_ujs
-//= require components
+//= require ./components/scores_box
 //= require_tree .
 
+React.render(
+  <ScoresBox  />,
+  document.querySelector('.scores')
+  )
 
-$(function(){ $(document).foundation(); });
+

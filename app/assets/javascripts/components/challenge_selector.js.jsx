@@ -2,8 +2,17 @@ var ChallengeSelector = React.createClass ({
 
   getInitialState: function() {
     return {
-      challenges: []
+      challenges: [],
+      value: null,
     };
+  },
+
+  clear: function() {
+    this.setState({ value: null })
+  },
+
+  _handleChange: function (event) {
+    this.setState({value: event.target.value});
   },
 
   componentDidMount: function() {
@@ -23,10 +32,11 @@ var ChallengeSelector = React.createClass ({
 
   render: function() {
     var challenge_options = this.state.challenges.map(function (challenge) {
-        return <option value={challenge.id}>{challenge.title}</option>
+        return <option value={challenge.id} key={challenge.id}>{challenge.title}</option>
     })
     return(
-      <select>
+      <select className="radius" ref="challenge" value={this.state.value} onChange={this._handleChange}>
+      <option selected={this.state.value == null}>select a challenge</option>
         {challenge_options}
       </select>
     );

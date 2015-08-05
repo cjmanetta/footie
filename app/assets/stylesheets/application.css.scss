@@ -12,19 +12,34 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600|Roboto+Slab:300);
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 $main-font: 'Open Sans', sans-serif;
 $heading-font: 'Roboto Slab', serif;
-$first-color: #00cacc;
-$second-color: #9665c0;
+$blue-color: #DBE8E2;
+$coral-color: #ed815a;
 $third-color: #FF6D67;
-$fourth-color: #f4d583;
-$dark-color: #353535;
+$shadow: #BABABA;
+$dark-color: #171424;
+$panel: #BEC9C4;
+$button-color: #f4d583;
+
+.fa {
+  color: $coral-color;
+}
+
+.fa:hover {
+  color: $dark-color;
+}
+
+.activity-title {
+  font: 125% $heading-font;
+}
 
 
 
@@ -33,16 +48,26 @@ body {
   color: black;
 }
 
-h1,h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   font: 200% $heading-font;
+}
+
+h2 {
+  font: 220% $heading-font;
+  padding-bottom: 10px;
 }
 
 button, .button {
   font: 100% $heading-font;
   color: $dark-color;
-  background-color: $fourth-color;
+  background-color: $button-color;
+  border-color: $button-color;
  }
 
+ button:hover, .button:hover {
+  background-color: $coral-color;
+  border-color: $coral-color;
+ }
 
 ul {
   list-style-type: none;
@@ -52,12 +77,49 @@ ul {
 li {
   text-decoration: none;
 }
+.price {
+  white-space: nowrap;
+}
 
 .dashboard {
   padding-top: 30px;
 }
 
-.activities {
-  background-color: $first-color;
+.login {
+  padding-top: 30px;
 }
 
+.activities {
+  background-color: $blue-color;
+  max-width: none;
+}
+
+.panel {
+  -webkit-box-shadow: 0 8px 6px -6px $shadow;
+     -moz-box-shadow: 0 8px 6px -6px $shadow;
+          box-shadow: 0 8px 6px -6px $shadow;
+  background-color: none;
+  border-color: none;
+  border-radius: 0.25em;
+}
+
+.panel-container {
+  margin-top: 20px;
+}
+
+.score-value {
+  color: $coral-color;
+  font: 175% $heading-font;
+}
+
+.score-name {
+  font: 100% $heading-font;
+  position : relative;
+  top : -.3em;
+  padding-right: 4px;
+}
+
+.score-container {
+  border-bottom: 1px dotted $shadow;
+
+}

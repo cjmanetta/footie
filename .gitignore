@@ -1,2 +1,14 @@
 .env
-tmp
+
+
+#ignore bundler file
+/.bundle
+
+
+#ignore logs and temp
+/log/*
+!/log/.keep
+/tmp
+
+
+scratch

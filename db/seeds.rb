@@ -13,6 +13,15 @@
 # players
 User.create(
   admin: false,
+  firstname: "Bailey",
+  lastname: "Parsons",
+  birthdate: Date.parse('2003-10-20'),
+  username:"bparsons",
+  password: "1234")
+
+
+User.create(
+  admin: false,
   firstname: "Anni",
   lastname: "Coss",
   birthdate: Date.parse('2003-10-20'),

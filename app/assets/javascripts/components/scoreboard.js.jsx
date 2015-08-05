@@ -1,27 +1,19 @@
 var Scoreboard = React.createClass({
-  getInitialState: function() {
-    return { scores: this.props.initialScores };
-  },
 
   render: function() {
+    this.props.scores.sort(function(a, b) {
+      return b.score - a.score;
+    });
 
-    var scores = this.state.scores.map(function(score) {
+    var scores = this.props.scores.map(function(score) {
       return <Score key={score.id} score={score} />
     });
 
-
     return (
-      <div className="scoreboard small-6 columns">
-        <ul>
-          <li>{scores}</li>
-        </ul>
+      <div className="panel small-12 small-centered columns text-center">
+        <h2>scoreboard</h2>
+        {scores}
       </div>
     );
-  },
+  }
 });
-
-
-React.render(
-  <Scoreboard />,
-  document.querySelector('.scores')
-  )

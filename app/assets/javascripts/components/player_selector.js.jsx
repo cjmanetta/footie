@@ -1,9 +1,17 @@
 var PlayerSelector = React.createClass ({
-
   getInitialState: function() {
     return {
-      players: []
+      players: [],
+      value: null,
     };
+  },
+
+  clear: function() {
+    this.setState({ value: null })
+  },
+
+  _handleChange: function(event) {
+    this.setState({value: event.target.value});
   },
 
   componentDidMount: function() {
@@ -23,10 +31,11 @@ var PlayerSelector = React.createClass ({
 
   render: function() {
     var player_options = this.state.players.map(function (player) {
-        return <option value={player.firstname}>{player.firstname}</option>
+        return <option value={player.id} key={player.id}>{player.firstname}</option>
     })
     return(
-      <select>
+      <select className="radius" ref="player" value={this.state.value} onChange={this._handleChange}>
+        <option selected={this.state.value == null}>select a player</option>
         {player_options}
       </select>
     );

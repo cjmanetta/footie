@@ -1,169 +1,49 @@
-# footie
+## footie
 
 footie is a simple points tracking app for managing contests or player progress over the course of a sports season. I developed it initially as a personal project with the aim of never having to use a spreadsheet to track player stats ever again.
 
 footie evolved into a great platform for me to learn new technologies. I began the project in Sinatra and then ported it to Rails before using it as a tool to learn React and deepeen my understanding of Javascript.
 
 
-## screencast
-
+## Screencast
 [screencast](https://youtu.be/eLw_B1rymtk)
 
-## technologies
+## Technologies
 I learned so much working on this project. Heres a list of all of the technologies I used in the development process.
 
-frontend:
-* HTML + CSS +SASS
+Frontend:
+* HTML + CSS + SASS
 * JavaScript
 * jQuery + Ajax
 * React
 
-backend:
+Backend:
 * Ruby
 * Postgresql
 * Rails
 
-testing:
-* Capybara
-* Selenium
-
-oauth:
+Oauth:
 * Teamsnap API [teamsnap docs](http://developer.teamsnap.com/)
 * dotenv gem 
 * HTTP
 
-###  usage
+## Usage and Invitation to Collaborate
+This project is open-source, so please feel free to clone, submit pull requests, issues or feature reccomendations. 
 
-Oauth and the dotenv gem - use the dotenv rials gem to save environment varaibles
+Local Setup:
+Currently footie is not deployed. I am working on deploying to Heroku but my Oauth isn't working in that environment 
 
-add this line to  Gemfile:
+Oauth and the dotenv gem - use the dotenv rails gem to save ENV varialbes for client id and client secret.
 
+Add the dotenv-rails gem to your Gemfile and bundle:
 ```ruby
 gem 'dotenv-rails', :groups => [:development, :test]
 ```
 
-And then execute:
-
-```shell
-$ bundle
-```
-
-#### Note on load order
-
-dotenv is initialized in your Rails app during the `before_configuration` callback, which is fired when the `Application` constant is defined in `config/application.rb` with `class Application < Rails::Application`. If you need it to be initialized sooner, you can manually call `Dotenv::Railtie.load`.
-
+I used the ruby Net::HTTP API and the ruby URI module to handle the uris and construct the http requests. Require them at the top of the controller which handles the Oauth.
 ```ruby
-# config/application.rb
-Bundler.require(*Rails.groups)
+require "uri"
+require "net/http"
 
-Dotenv::Railtie.load
-
-HOSTNAME = ENV['HOSTNAME']
 ```
 
-If you use gems that require environment variables to be set before they are loaded, then list `dotenv-rails` in the `Gemfile` before those other gems and require `dotenv/rails-now`.
-
-```ruby
-gem 'dotenv-rails', :require => 'dotenv/rails-now'
-gem 'gem-that-requires-env-variables'
-```
-
-### Sinatra or Plain ol' Ruby
-
-Install the gem:
-
-```shell
-$ gem install dotenv
-```
-
-As early as possible in your application bootstrap process, load `.env`:
-
-```ruby
-require 'dotenv'
-Dotenv.load
-```
-
-Alternatively, you can use the `dotenv` executable to launch your application:
-
-```shell
-$ dotenv ./script.py
-```
-
-To ensure `.env` is loaded in rake, load the tasks:
-
-```ruby
-require 'dotenv/tasks'
-
-task :mytask => :dotenv do
-    # things that require .env
-end
-```
-
-## Usage
-
-Add your application configuration to your `.env` file in the root of your project:
-
-```shell
-S3_BUCKET=YOURS3BUCKET
-SECRET_KEY=YOURSECRETKEYGOESHERE
-```
-
-If you need multiline variables, for example private keys, you can double quote strings and use the `\n` character for newlines:
-
-```shell
-PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----\nHkVN9…\n-----END DSA PRIVATE KEY-----\n"
-```
-
-You need to add the output of a command in one of your variables? Simply add it with `$(your_command)`:
-```shell
-DATABASE_URL="postgres://$(whoami)@localhost/my_database"
-```
-
-You may also add `export` in front of each line so you can `source` the file in bash:
-
-```shell
-export S3_BUCKET=YOURS3BUCKET
-export SECRET_KEY=YOURSECRETKEYGOESHERE
-```
-
-Whenever your application loads, these variables will be available in `ENV`:
-
-```ruby
-config.fog_directory  = ENV['S3_BUCKET']
-```
-
-Comments may be added to your file as such:
-
-```shell
-# This is a comment
-SECRET_KEY=YOURSECRETKEYGOESHERE # comment
-SECRET_HASH="something-with-a-#-hash"
-```
-
-Variable names may not contain the `#` symbol. Values can use the `#` if they are enclosed in quotes.
-
-## Multiple Rails Environments
-
-dotenv was originally created to load configuration variables into `ENV` in *development*. There are typically better ways to manage configuration in production environments - such as `/etc/environment` managed by [Puppet](https://github.com/puppetlabs/puppet) or [Chef](https://github.com/opscode/chef), `heroku config`, etc.
-
-However, some find dotenv to be a convenient way to configure Rails applications in staging and production environments, and you can do that by defining environment-specific files like `.env.production` or `.env.test`.
-
-You can also use `.env.local` for local overrides.
-
-If you use this gem to handle env vars for multiple Rails environments (development, test, production, etc.), please note that env vars that are general to all environments should be stored in `.env`. Then, environment specific env vars should be stored in `.env.<that environment's name>`. When you load a certain environment, dotenv will first load general env vars from `.env`, then load environment specific env vars from `.env.<current environment>`. Variables defined in `.env.<current environment>` will override any values set in `.env` or already defined in the environment.
-
-## Should I commit my .env file?
-
-Credentials should only be accessible on the machines that need access to them. Never commit sensitive information to a repository that is not needed by every development machine and server.
-
-Personally, I prefer to commit the `.env` file with development-only settings. This makes it easy for other developers to get started on the project without compromising credentials for other environments. If you follow this advice, make sure that all the credentials for your development environment are different from your other deployments and that the development credentials do not have access to any confidential data.
-
-## Contributing
-
-If you want a better idea of how dotenv works, check out the [Ruby Rogues Code Reading of dotenv](https://www.youtube.com/watch?v=lKmY_0uY86s).
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request

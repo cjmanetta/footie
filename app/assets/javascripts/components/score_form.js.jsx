@@ -8,11 +8,30 @@ var ScoreForm = React.createClass({
 
   },
 
-  handleScoreSubmit: function(score) {
+  handleScoreSubmit: function(event) {
+    event.preventDefault();
     var score = this.refs.score.getDOMNode().value;
     var challenge = this.state.challenge;
     var player = this.state.player;
-    console.log(challenge)
+
+    var data = {score: {value: score, activity_id: challenge, user_id: player}}
+    console.log("heres the stuff")
+    console.log(data)
+    $.ajax({
+      url: '/scores',
+      type: 'post',
+      dataType: 'json',
+      data: data,
+      success: function(response) {
+        console.log(response)
+        console.log("success")
+
+      }.bind(this),
+      error: function(data) {
+        console.log(data)
+        console.error('there was a problem sending the score data to the server');
+      }.bind(this)
+    });
   },
 
   handleChallenge: function(challenge) {

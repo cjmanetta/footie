@@ -1,15 +1,4 @@
 
-# 10.times do
-#   User.create(
-#     firstname: Faker::Name.first_name,
-#     lastname: Faker::Name.last_name,
-#     username: Faker::Internet.user_name,
-#     birthdate: Faker::Date.backward(1000),
-#     email: Faker::Internet.email,
-#     password: "1234")
-# end
-
-
 # players
 User.create(
   admin: false,
@@ -72,23 +61,23 @@ User.create(
   Activity.create(
     title: "Ronaldo Chop",
     description: "2pts at speed",
-    date: Faker::Date.forward(60),
+    date: Date.parse('2015-10-25'),
     activity_type: "Challenge")
 
   Activity.create(
     title: "Juggling",
     description: "4pts per juggle",
-    date: Faker::Date.forward(60),
+    date: Date.parse('2015-09-02'),
     activity_type: "Challenge")
 
   Activity.create(
     title: "Maradona",
     description: "5pts at speed",
-    date: Faker::Date.forward(60),
+    date: Date.parse('2015-09-15'),
     activity_type: "Challenge")
 
   Activity.create(
     title: "Headers",
     description: "2pts for each one",
-    date: Faker::Date.forward(60),
+    date: Date.parse('2015-10-05'),
     activity_type: "Challenge")

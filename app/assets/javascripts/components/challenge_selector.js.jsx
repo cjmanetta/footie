@@ -35,7 +35,7 @@ var ChallengeSelector = React.createClass ({
         return <option value={challenge.id} key={challenge.id}>{challenge.title}</option>
     })
     return(
-      <select ref="challenge" value={this.state.value} onChange={this._handleChange}>
+      <select className="radius" ref="challenge" value={this.state.value} onChange={this._handleChange}>
       <option selected={this.state.value == null}>select a challenge</option>
         {challenge_options}
       </select>

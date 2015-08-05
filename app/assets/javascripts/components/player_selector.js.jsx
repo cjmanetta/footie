@@ -34,7 +34,7 @@ var PlayerSelector = React.createClass ({
         return <option value={player.id} key={player.id}>{player.firstname}</option>
     })
     return(
-      <select ref="player" value={this.state.value} onChange={this._handleChange}>
+      <select className="radius" ref="player" value={this.state.value} onChange={this._handleChange}>
         <option selected={this.state.value == null}>select a player</option>
         {player_options}
       </select>

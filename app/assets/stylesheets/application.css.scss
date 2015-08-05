@@ -12,7 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600|Roboto+Slab:300);
 
@@ -41,8 +40,13 @@ button, .button {
   font: 100% $heading-font;
   color: $dark-color;
   background-color: $fourth-color;
+  border-color: $fourth-color;
  }
 
+ button:hover, .button:hover {
+  background-color: $third-color;
+  border-color: $third-color;
+ }
 
 ul {
   list-style-type: none;
@@ -59,10 +63,4 @@ li {
 
 .activities {
   background-color: $first-color;
-}
-
-form button:link, form button:hover {
-  border: none;
-  background-color: $first-color;
-
 }

@@ -7,11 +7,13 @@ var Scoreboard = React.createClass({
 
 
     return (
-      <div>
-        <h2>scoreboard</h2>
-        <ul>
-          <li>{scores}</li>
-        </ul>
+      <div className="row">
+        <div className="small-12 small-centered columns">
+          <h2>scoreboard</h2>
+          <ul>
+            <li>{scores}</li>
+          </ul>
+        </div>
       </div>
     );
   }

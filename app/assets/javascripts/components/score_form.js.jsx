@@ -1,69 +1,54 @@
+
+
 var ScoreForm = React.createClass({
 
-  getInitialState: function () {
-    return {
-      challenge: null,
-      player: null,
-    };
-
+  getInitialState: function() {
+    return {score: null}
   },
 
-  handleScoreSubmit: function(event) {
+  _handleSubmit: function(event) {
     event.preventDefault();
-    var score = this.refs.score.getDOMNode().value;
-    var challenge = this.state.challenge;
-    var player = this.state.player;
+    var score = this.state.score;
+    var playerId = this.refs.playerSelector.state.value;
+    var challengeId = this.refs.challengeSelector.state.value;
+    var data = { score: {value: score, activity_id: challengeId, user_id: playerId} }
 
-    var data = {score: {value: score, activity_id: challenge, user_id: player}}
-    console.log("heres the stuff")
-    console.log(data)
     $.ajax({
       url: '/scores',
       type: 'post',
       dataType: 'json',
       data: data,
-      success: function(response) {
-        console.log(response)
-        console.log("success")
-
-      }.bind(this),
+      success: this.props.onSuccess,
       error: function(data) {
-        console.log(data)
         console.error('there was a problem sending the score data to the server');
       }.bind(this)
     });
   },
 
-  handleChallenge: function(challenge) {
-    console.log('at handleChallenge')
-    console.log(challenge)
-    this.setState({
-      challenge: challenge,
-    })
+  clearForm: function() {
+    this.refs.challengeSelector.clear()
+    this.refs.playerSelector.clear()
+    this.setState({score: null})
   },
 
-  handlePlayer: function(player) {
-    console.log('at handlePlayer')
-    console.log(player)
-    this.setState({
-      player: player,
-    })
+  _handleChange: function(event) {
+    this.setState({score: event.target.value})
   },
 
 
   render: function() {
     return (
-      <form onSubmit={this.handleScoreSubmit}>
+      <form onSubmit={this._handleSubmit}>
         <div className="row">
           <h2>add a score</h2>
-          <ChallengeSelector input={this.handleChallenge} />
+          <ChallengeSelector ref="challengeSelector" />
         </div>
         <div className="row">
-          <PlayerSelector input={this.handlePlayer} ref="player" />
+          <PlayerSelector ref="playerSelector" />
         </div>
         <div className="row collapse postfix-radius">
           <div className="medium-9 small-12 columns">
-            <input type="number" placeholder="points" ref="score"/>
+            <input type="number" value={this.state.score} onChange={this._handleChange} placeholder="points" ref="scoreValue" />
           </div>
           <div className="medium-3 small-12 columns">
             <input type="submit" className="button postfix" />

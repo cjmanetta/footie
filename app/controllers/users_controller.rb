@@ -13,12 +13,24 @@ class UsersController < ApplicationController
       player_hash = {"firstname" => @players[index].firstname, "score" => @total_scores[index]  }
       @totals_array << player_hash
     end
-    render json: {totals_array: @totals_array}
 
-    if @user.admin == true
-      render 'users/coaches/dashboard'
+    gon.user_id = @user.id
+
+
+    if request.xhr?
+      p 'x' *100
+      p "xhr"
+      p 'x' *100
+      render json: { scores: @totals_array }
     else
-      render 'users/players/dashboard'
+      if @user.admin == true
+      p 'x' *100
+      p "for user dashboard"
+      p 'x' *100
+        render 'users/coaches/dashboard'
+      else
+        render 'users/players/dashboard'
+      end
     end
   end
 

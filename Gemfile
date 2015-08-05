@@ -8,7 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'rails_12factor', group: :production
 
 gem 'foundation-rails', '~> 5.5.0'
-
+gem 'gon'
 
 gem 'jquery-rails'
 

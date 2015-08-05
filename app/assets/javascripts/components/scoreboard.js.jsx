@@ -1,6 +1,26 @@
 var Scoreboard = React.createClass({
+
   getInitialState: function() {
-    return { scores: this.props.initialScores };
+    return { scores: [] };
+  },
+
+  componentDidMount: function() {
+    var path = '/users/' + gon.user_id;
+    console.log(path);
+    $.ajax({
+      url: path,
+      type: 'get',
+      dataType: 'json',
+      success: function(response) {
+        console.log('tried to succeed')
+        this.setState({scores: response.scores});
+        console.log('success');
+      }.bind(this),
+      error: function(data) {
+        console.log(data)
+        console.error('there was a problem getting the scores');
+      }.bind(this)
+    });
   },
 
   render: function() {
@@ -10,17 +30,9 @@ var Scoreboard = React.createClass({
 
 
     return (
-      <div className="scoreboard small-6 columns">
         <ul>
           <li>{scores}</li>
         </ul>
-      </div>
     );
-  },
+  }
 });
-
-
-React.render(
-  <Scoreboard />,
-  document.querySelector('.scores')
-  )

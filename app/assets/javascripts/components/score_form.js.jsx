@@ -4,7 +4,8 @@ var ScoreForm = React.createClass({
     return {
       challenge: null,
       player: null,
-    }
+    };
+
   },
 
   handleScoreSubmit: function(score) {
@@ -50,11 +51,8 @@ var ScoreForm = React.createClass({
           </div>
         </div>
       </form>
+
     )
   }
 });
 
-React.render(
-  <ScoreForm  />,
-  document.querySelector('.new-score')
-  )

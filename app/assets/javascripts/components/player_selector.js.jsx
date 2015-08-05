@@ -1,9 +1,7 @@
 var PlayerSelector = React.createClass ({
 
   getInitialState: function() {
-    return {
-      players: []
-    };
+    return { players: [] };
   },
 
   passInfo: function() {
@@ -17,6 +15,7 @@ var PlayerSelector = React.createClass ({
       type: 'get',
       dataType: 'json',
       success: function(players) {
+        console.log(players)
         this.setState({players: players});
       }.bind(this),
       error: function(data) {
@@ -27,11 +26,13 @@ var PlayerSelector = React.createClass ({
   },
 
   render: function() {
+    console.log(this.state.players)
     var player_options = this.state.players.map(function (player) {
         return <option value={player.id}>{player.firstname}</option>
     })
     return(
       <select ref="player" onChange={this.passInfo}>
+        <option>select a player</option>
         {player_options}
       </select>
     );

@@ -57,6 +57,7 @@ h2 {
   padding-bottom: 10px;
 }
 
+
 button, .button {
   font: 100% $heading-font;
   color: $dark-color;
@@ -120,6 +121,6 @@ li {
 }
 
 .score-container {
-  border-bottom: 1px dotted $shadow;
+  border-top: 1px dotted $shadow;
 
 }

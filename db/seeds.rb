@@ -2,43 +2,43 @@
 # players
 User.create(
   admin: false,
-  firstname: "Bailey",
-  lastname: "Parsons",
+  firstname: "Hope",
+  lastname: "Solo",
   birthdate: Date.parse('2003-10-20'),
-  username:"bparsons",
+  username:"hsolo",
   password: "1234")
 
 
 User.create(
   admin: false,
-  firstname: "Anni",
-  lastname: "Coss",
+  firstname: "Becky",
+  lastname: "sauerbrunn",
   birthdate: Date.parse('2003-10-20'),
   username:"acoss",
   password: "1234")
 
 User.create(
   admin: false,
-  firstname: "Arista",
-  lastname: "Vasquez",
+  firstname: "Megan",
+  lastname: "Rapinoe",
   birthdate: Date.parse('2004-12-15'),
   username:"avasquez",
   password: "1234")
 
 User.create(
   admin: false,
-  firstname: "Carli",
-  lastname: "Smith",
+  firstname: "Kelley",
+  lastname: "O'Hara",
   birthdate: Date.parse('2003-08-02'),
   username:"csmith",
   password: "1234")
 
 User.create(
   admin: false,
-  firstname: "Haley",
-  lastname: "Dolin",
+  firstname: "Carli",
+  lastname: "Lloyd",
   birthdate: Date.parse('2004-01-12'),
-  username:"hdolin",
+  username:"mdolin",
   password: "1234")
 
 # coaches

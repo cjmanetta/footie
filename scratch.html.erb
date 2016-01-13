@@ -1,0 +1,29 @@
+<%= form_tag '/login' do -%>
+<div class="login small-6 small-centered columns">
+  <div class="row">
+      <h2>login</h2>
+      <div class="row collapse prefix-radius">
+        <div class="small-2 columns">
+          <span class="prefix"><i class="fa fa-user"></i></span>
+        </div>
+        <div class="small-10 columns">
+          <%= text_field_tag :username, nil, required: true, placeholder: 'username'  %>
+        </div>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="row collapse prefix-radius">
+        <div class="medium-2 small-2 columns">
+          <span class="prefix"><i class="fa fa-key"></i></span>
+        </div>
+        <div class="medium-7 small-10 columns">
+          <%= password_field_tag :password, nil, placeholder: 'password' %>
+        </div>
+        <div class="medium-3 small-12 columns">
+          <%= submit_tag 'login', class: 'button tiny postfix radius' %>
+        </div>
+      </div>
+  </div>
+</div>
+<% end %>

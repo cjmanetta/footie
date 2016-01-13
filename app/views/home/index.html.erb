@@ -1,29 +1,85 @@
-<%= form_tag '/login' do -%>
-<div class="login small-6 small-centered columns">
-  <div class="row">
-      <h2>login</h2>
-      <div class="row collapse prefix-radius">
-        <div class="small-2 columns">
-          <span class="prefix"><i class="fa fa-user"></i></span>
-        </div>
-        <div class="small-10 columns">
-          <%= text_field_tag :username, nil, required: true, placeholder: 'username'  %>
-        </div>
-      </div>
-  </div>
+<main class="login ui middle aligned center aligned grid container">
+    <article class="column">
 
-  <div class="row">
-      <div class="row collapse prefix-radius">
-        <div class="medium-2 small-2 columns">
-          <span class="prefix"><i class="fa fa-key"></i></span>
-        </div>
-        <div class="medium-7 small-10 columns">
-          <%= password_field_tag :password, nil, placeholder: 'password' %>
-        </div>
-        <div class="medium-3 small-12 columns">
-          <%= submit_tag 'login', class: 'button tiny postfix radius' %>
-        </div>
+      <div class="ui secondary pointing menu">
+        <a data-tab="first" class="item active">login</a>
+        <a data-tab="second" class="item">sign up</a>
       </div>
-  </div>
-</div>
-<% end %>
+
+      <article class="ui bottom attached active tab basic segment" data-tab="first">
+        <%= form_tag '/login', class: 'ui large form' do -%>
+          <div class="field">
+            <div class="ui corner labeled input">
+              <%= text_field_tag :username, nil, required: true, placeholder: 'username'  %>
+              <div class="ui corner label">
+                <i class="user icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui corner labeled input">
+              <%= password_field_tag :password, nil, placeholder: 'password' %>
+              <div class="ui corner label">
+                <i class="key icon"></i>
+              </div>
+            </div>
+          </div>
+          <%= submit_tag 'login', class: 'ui fluid inverted button' %>
+        <% end %>
+      </article>
+
+      <article class="ui bottom attached tab basic segment" data-tab="second">
+        <%= form_tag '/create', class: 'ui large form' do -%>
+          <div class="field">
+            <div class="ui corner labeled input">
+              <%= text_field_tag :firstname, nil, required: true, placeholder: 'firstname'  %>
+              <div class="ui corner label">
+                <i class="user icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui corner labeled input">
+              <%= text_field_tag :lastname, nil, required: true, placeholder: 'lastname'  %>
+              <div class="ui corner label">
+                <i class="user icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui corner labeled input">
+              <%= date_field_tag :birthdate, nil, required: true  %>
+              <div class="ui corner label">
+                <i class="user icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui corner labeled input">
+              <%= text_field_tag :email, nil, required: true, placeholder: 'email'  %>
+              <div class="ui corner label">
+                <i class="user icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui corner labeled input">
+              <%= text_field_tag :username, nil, required: true, placeholder: 'username'  %>
+              <div class="ui corner label">
+                <i class="user icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui corner labeled input">
+              <%= password_field_tag :password, nil, placeholder: 'create a password' %>
+              <div class="ui corner label">
+                <i class="key icon"></i>
+              </div>
+            </div>
+          </div>
+          <%= submit_tag 'sign up', class: 'ui fluid inverted button' %>
+        <% end %>
+      </article>
+    </article>
+</main>

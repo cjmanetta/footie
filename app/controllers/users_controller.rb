@@ -28,10 +28,24 @@ class UsersController < ApplicationController
     end
   end
 
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to user_path(current_user)
+    else
+      render root
+    end
+  end
 
   def index
     players = User.players.all
     render json: players
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:firstname, :lastname, :birthdate, :email, :admin, :username, :password_digest)
   end
 end
 

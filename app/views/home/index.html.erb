@@ -29,57 +29,7 @@
       </article>
 
       <article class="ui bottom attached tab basic segment" data-tab="second">
-        <%= form_tag '/create', class: 'ui large form' do -%>
-          <div class="field">
-            <div class="ui corner labeled input">
-              <%= text_field_tag :firstname, nil, required: true, placeholder: 'firstname'  %>
-              <div class="ui corner label">
-                <i class="user icon"></i>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui corner labeled input">
-              <%= text_field_tag :lastname, nil, required: true, placeholder: 'lastname'  %>
-              <div class="ui corner label">
-                <i class="user icon"></i>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui corner labeled input">
-              <%= date_field_tag :birthdate, nil, required: true  %>
-              <div class="ui corner label">
-                <i class="user icon"></i>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui corner labeled input">
-              <%= text_field_tag :email, nil, required: true, placeholder: 'email'  %>
-              <div class="ui corner label">
-                <i class="user icon"></i>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui corner labeled input">
-              <%= text_field_tag :username, nil, required: true, placeholder: 'username'  %>
-              <div class="ui corner label">
-                <i class="user icon"></i>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui corner labeled input">
-              <%= password_field_tag :password, nil, placeholder: 'create a password' %>
-              <div class="ui corner label">
-                <i class="key icon"></i>
-              </div>
-            </div>
-          </div>
-          <%= submit_tag 'sign up', class: 'ui fluid inverted button' %>
-        <% end %>
+        <%= render 'users/new' %>
       </article>
     </article>
 </main>

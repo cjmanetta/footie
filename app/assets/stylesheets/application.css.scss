@@ -44,6 +44,8 @@ body {
 }
 
 
+
+
 .fa {
   color: $coral-color;
 }
@@ -61,6 +63,7 @@ body >.grid {
     // margin-top: -50px;
   }
 }
+
 .ui.secondary.pointing.menu {
  .item, .active.item {
     color: white;
@@ -90,6 +93,22 @@ body >.grid {
 .ui.fluid.button {
   border: 3px solid white;
   font-family: $heading-font;
+  font-size: 1.45em;
+}
+
+.ui.checkbox {
+  input:focus ~ label {
+    font-family: $heading-font;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+  }
+  label, label:visited, label:hover {
+    font-family: $heading-font;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+  }
 }
 // article:nth-child(even) {
 //   background-color: purpitermle;

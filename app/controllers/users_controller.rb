@@ -30,6 +30,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    debugger
     if @user.save
       redirect_to user_path(current_user)
     else
@@ -38,8 +39,9 @@ class UsersController < ApplicationController
   end
 
   def index
-    players = User.players.all
-    render json: players
+    @users = User.all
+    # players = User.players.all
+    # render json: players
   end
 
   private

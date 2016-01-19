@@ -12,14 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require semantic
 //= require react
 //= require react_ujs
 //= require ./components/scores_box
 //= require_tree .
 
-React.render(
-  <ScoresBox  />,
-  document.querySelector('.scores')
-  )
+// React.render(
+//   <ScoresBox  />,
+//   document.querySelector('.scores')
+//   )
 
+  $('.menu .item').tab();
 

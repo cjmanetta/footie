@@ -14,7 +14,7 @@ User.create(
   firstname: "Becky",
   lastname: "sauerbrunn",
   birthdate: Date.parse('2003-10-20'),
-  username:"acoss",
+  username:"bsauerbrunn",
   password: "1234")
 
 User.create(
@@ -22,7 +22,7 @@ User.create(
   firstname: "Megan",
   lastname: "Rapinoe",
   birthdate: Date.parse('2004-12-15'),
-  username:"avasquez",
+  username:"mrapinoe",
   password: "1234")
 
 User.create(
@@ -30,7 +30,7 @@ User.create(
   firstname: "Kelley",
   lastname: "O'Hara",
   birthdate: Date.parse('2003-08-02'),
-  username:"csmith",
+  username:"kohara",
   password: "1234")
 
 User.create(
@@ -38,7 +38,7 @@ User.create(
   firstname: "Carli",
   lastname: "Lloyd",
   birthdate: Date.parse('2004-01-12'),
-  username:"mdolin",
+  username:"clloyd",
   password: "1234")
 
 # coaches
@@ -52,10 +52,10 @@ User.create(
 
 User.create(
   admin: true,
-  firstname: "Dena",
-  lastname: "Delaviz",
-  birthdate: Date.parse('1985-06-02'),
-  username:"ddelaviz",
+  firstname: "Jill",
+  lastname: "Ellis",
+  birthdate: Date.parse('1960-06-02'),
+  username:"jellis",
   password: "1234")
 
   Activity.create(

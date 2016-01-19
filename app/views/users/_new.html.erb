@@ -1,0 +1,57 @@
+<%= form_for @user, url: {action: "create", controller: "users"}, html: {class: 'ui large form'} do |f| -%>
+      <div class="field">
+        <div class="ui checkbox">
+          <%= f.check_box :admin %>
+          <label>are you a coach?</label>
+        </div>
+    </div>
+  <div class="field">
+    <div class="ui corner labeled input">
+      <%= f.text_field :firstname, placeholder: 'firstname'  %>
+      <div class="ui corner label">
+        <i class="user icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="ui corner labeled input">
+      <%= f.text_field :lastname, placeholder: 'lastname'  %>
+      <div class="ui corner label">
+        <i class="user icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="ui corner labeled input">
+      <%= f.date_field :birthdate  %>
+      <div class="ui corner label">
+        <i class="user icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="ui corner labeled input">
+      <%= f.text_field :email, placeholder: 'email'  %>
+      <div class="ui corner label">
+        <i class="user icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="ui corner labeled input">
+      <%= f.text_field :username, placeholder: 'username'  %>
+      <div class="ui corner label">
+        <i class="user icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="ui corner labeled input">
+      <%= f.password_field :password_digest, placeholder: 'create a password' %>
+      <div class="ui corner label">
+        <i class="key icon"></i>
+      </div>
+    </div>
+  </div>
+  <%= f.submit 'sign up', class: 'ui fluid inverted button' %>
+<% end %>

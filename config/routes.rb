@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :users, only: [:index]
   end
 
-  resources :users, only: [:show, :create, :index]
+  resources :users, only: [:show, :create]
   get 'scores#*', to: 'home#index'
   # resources :scores, except: [:index]
 

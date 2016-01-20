@@ -10,9 +10,13 @@ var Scoreboard = React.createClass({
     });
 
     return (
-      <div className="panel small-12 small-centered columns text-center">
-        <h2>scoreboard</h2>
-        {scores}
+      <div className="ui raised inverted segment">
+        <img className="ui fluid image" src={"<%= asset_url('scoreboard.png') %>"} />
+        <div className="container">
+        <table  className="ui unstackable striped table">
+          {scores}
+        </table>
+        </div>
       </div>
     );
   }

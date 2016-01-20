@@ -32,11 +32,11 @@ var ChallengeSelector = React.createClass ({
 
   render: function() {
     var challenge_options = this.state.challenges.map(function (challenge) {
-        return <option value={challenge.id} key={challenge.id}>{challenge.title}</option>
+        return <option className="item" value={challenge.id} key={challenge.id}>{challenge.title}</option>
     })
     return(
-      <select className="radius" ref="challenge" value={this.state.value} onChange={this._handleChange}>
-      <option selected={this.state.value == null}>select a challenge</option>
+      <select className="ui selection dropdown" ref="challenge" defaultValue="" value={this.state.value} onChange={this._handleChange}>
+      <option className="default text" value="">select a challenge</option>
         {challenge_options}
       </select>
     );

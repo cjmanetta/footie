@@ -38,34 +38,22 @@ var ScoreForm = React.createClass({
 
   render: function() {
     return (
-      <form onSubmit={this._handleSubmit}>
-        <div className="row">
-          <div className= "small-9 small-centered columns">
-            <h2>add a score</h2>
-            <ChallengeSelector ref="challengeSelector" />
-          </div>
+      <form className="ui form" onSubmit={this._handleSubmit}>
+        <h2>add a score</h2>
+        <div className="field">
+          <ChallengeSelector ref="challengeSelector" />
         </div>
 
-        <div className="row">
-          <div className= "small-9 small-centered columns">
-            <PlayerSelector ref="playerSelector" />
-          </div>
+        <div className="field">
+          <PlayerSelector ref="playerSelector" />
         </div>
-
-        <div className="row">
-          <div className="small-9 small-centered columns">
-            <div className="row collapse postfix-radius">
-              <div className="medium-9 small-12 columns">
-                <input type="number" value={this.state.score} onChange={this._handleChange} placeholder="points" ref="scoreValue" />
-              </div>
-              <div className="medium-3 small-12 columns">
-                <input type="submit" className="button tiny postfix radius" />
-              </div>
-            </div>
-          </div>
+        <div className="field">
+        <div className="ui action input">
+          <input type="number" value={this.state.score} onChange={this._handleChange} placeholder="points" ref="scoreValue" />
+          <button type="submit" className="ui button">record</button>
+        </div>
         </div>
       </form>
-
     )
   }
 });

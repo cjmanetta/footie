@@ -35,7 +35,7 @@ html {
   font-family: $main-font;
 }
 
-h1, h2, h3, h4, h6 {
+h1, h2, h3, h4, h6, .ui.button, input, .ui.dropdown {
   font-family: $heading-font
 }
 
@@ -57,17 +57,18 @@ body {
 
 .scoreboard {
   max-width: 350px;
+
   .extra { font-family: $heading-font;}
+  .container {
+    height: 400px;
+    overflow: scroll;
+    margin-top: 5px;
+  }
 }
 
 .ui.mini.image {
   width: 50px;
 }
-
-
-// .ui.raised.segment {
-//   background-color: #4D4D4D;
-// }
 
 .fa {
   color: $coral-color;
@@ -83,7 +84,6 @@ body >.grid {
   .column {
     display: table-cell;
     vertical-align: middle;
-    // margin-top: -50px;
   }
 }
 
@@ -133,94 +133,3 @@ body >.grid {
     font-size: 1.5em;
   }
 }
-// article:nth-child(even) {
-//   background-color: purpitermle;
-// }
-
-// .activity-title {
-//   font: 125% $heading-font;
-// }
-
-
-
-// body {
-//   font: 75% $main-font;
-//   color: black;
-// }
-
-// h1, h3, h4, h5, h6 {
-//   font: 200% $heading-font;
-// }
-
-// h2 {
-//   font: 220% $heading-font;
-//   padding-bottom: 10px;
-// }
-
-
-// button, .button {
-//   font: 100% $heading-font;
-//   color: $dark-color;
-//   background-color: $button-color;
-//   border-color: $button-color;
-//  }
-
-//  button:hover, .button:hover {
-//   background-color: $coral-color;
-//   border-color: $coral-color;
-//  }
-
-// ul {
-//   list-style-type: none;
-
-// }
-
-// li {
-//   text-decoration: none;
-// }
-// .price {
-//   white-space: nowrap;
-// }
-
-// .dashboard {
-//   padding-top: 30px;
-// }
-
-// .login {
-//   padding-top: 30px;
-// }
-
-// .activities {
-//   background-color: $blue-color;
-//   max-width: none;
-// }
-
-// .panel {
-//   -webkit-box-shadow: 0 8px 6px -6px $shadow;
-//      -moz-box-shadow: 0 8px 6px -6px $shadow;
-//           box-shadow: 0 8px 6px -6px $shadow;
-//   background-color: none;
-//   border-color: none;
-//   border-radius: 0.25em;
-// }
-
-// .panel-container {
-//   margin-top: 20px;
-// }
-
-// .score-value {
-//   color: $coral-color;
-//   font: 175% $heading-font;
-// }
-
-// .score-name {
-//   font: 100% $heading-font;
-//   position : relative;
-//   top : -.3em;
-//   padding-right: 4px;
-// }
-
-// .score-container {
-//   border-top: 1px dotted $shadow;
-
-// }

@@ -31,11 +31,11 @@ var PlayerSelector = React.createClass ({
 
   render: function() {
     var player_options = this.state.players.map(function (player) {
-        return <option value={player.id} key={player.id}>{player.firstname}</option>
+        return <option className="item" value={player.id} key={player.id}>{player.firstname}</option>
     })
     return(
-      <select className="radius" ref="player" value={this.state.value} onChange={this._handleChange}>
-        <option selected={this.state.value == null}>select a player</option>
+      <select className="ui selection dropdown" ref="player" defaultValue="" onChange={this._handleChange}>
+      <option className="default text" value="">select a player</option>
         {player_options}
       </select>
     );

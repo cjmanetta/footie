@@ -32,14 +32,14 @@ var ScoresBox = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <div className="scoreboard medium-6  small-12 columns">
+      <article className="ui two column stackable center aligned grid container">
+        <div className="scoreboard column">
           <Scoreboard scores={this.state.scores} />
         </div>
-        <div className="new-score medium-6 small-12 columns">
+        <div className="new-score column">
           <ScoreForm ref="scoreForm" onScoreSubmit={this.handleScoreSubmit} onSuccess={this.onSuccess} />
         </div>
-      </div>
+      </article>
     )
   }
 });

@@ -1,0 +1,15 @@
+var Score = React.createClass({
+  render: function() {
+    return (
+      <tr>
+          <td className="single line center aligned">
+            <img className="ui mini circular centered image" src={"<%= asset_url('lloyd.png') %>"}/>
+            <p className="extra">{this.props.score.firstname}</p>
+          </td>
+          <td className="single line center aligned">
+            <h1>{this.props.score.score}</h1>
+          </td>
+      </tr>
+    );
+  }
+});

@@ -70,15 +70,8 @@ body {
   width: 50px;
 }
 
-.fa {
-  color: $coral-color;
-}
-
-.fa:hover {
-  color: $dark-color;
-}
-
-body >.grid {
+body
+.grid {
   height: 100%;
   display: table;
   .column {

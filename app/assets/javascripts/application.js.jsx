@@ -18,13 +18,12 @@
 //= require ./components/scores_box
 //= require_tree .
 
-React.render(
-  <ScoresBox  />,
-  document.querySelector('.scores')
-  )
+if (window.location.pathname!="/") {
+  React.render(
+    <ScoresBox  />,
+    document.querySelector('.scores')
+    )
+};
 
-  $('.menu .item').tab();
-
-$('.ui.dropdown')
-  .dropdown()
-;
+$('.menu .item').tab();
+$('.ui.dropdown').dropdown();

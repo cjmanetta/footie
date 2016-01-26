@@ -1,16 +1,14 @@
-<nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">
-      <h1><a href="#">footie</a></h1>
-    </li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="right">
-      <li>
+<nav class="ui secondary inverted menu">
+    <a class="item" href="#">footie</a>
+    <div class="right menu">
+      <div class="item">
         <% if current_user %>
-        <%= link_to 'logout', logout_path, method: :delete, class: "button tiny radius" %>
+          <%= link_to logout_path, method: :delete, class: "ui fluid inverted button" do %>
+            <span>logout</span>
+            <i class="angle right icon"></i>
+          <% end %>
         <% end %>
-      </li>
-    </ul>
-  </section>
+      </div>
+    </div>
 </nav>
+</div>

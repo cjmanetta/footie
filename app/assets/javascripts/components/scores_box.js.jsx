@@ -36,7 +36,7 @@ var ScoresBox = React.createClass({
         <div className="scoreboard column">
           <Scoreboard scores={this.state.scores} />
         </div>
-        <div className="new-score column">
+        <div className="new-score middle aligned column">
           <ScoreForm ref="scoreForm" onScoreSubmit={this.handleScoreSubmit} onSuccess={this.onSuccess} />
         </div>
       </article>

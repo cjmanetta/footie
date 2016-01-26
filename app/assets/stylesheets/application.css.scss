@@ -6,17 +6,7 @@
 
 @import "modules/landing";
 @import "modules/interface";
-
-
-.scores {
-  background: linear-gradient(to bottom right, rgba(13, 43, 13, 0.60) 0%, rgba(199, 176, 112, 0.4) 100%);
-  padding: 2%;
-}
-.ui.secondary.inverted.menu {
-  background-color: $dark-color;
-  height: 85px;
-  margin-bottom: 0px;
-}
+@import "modules/scoreboard";
 
 
 
@@ -24,25 +14,8 @@
 
 
 
-.scoreboard {
-  max-width: 400px;
-  .headline-image { margin-bottom: 24px;}
-  .ui.inverted.segment { background: $dark-color;}
-  table {
-  }
-  .extra { font-family: $heading-font;}
-  .container {
-    height: 450px;
-    // box-shadow: -6px 6px 15px #888888;
-    overflow: scroll;
-    margin-top: 5px;
-    border-bottom: 56px solid $dark-color;
-  }
-}
 
-.ui.mini.image {
-  width: 50px;
-}
+
 
 
 

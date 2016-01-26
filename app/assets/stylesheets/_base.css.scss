@@ -11,9 +11,14 @@ body { background: url('whitesand.png') center center fixed;}
   background-size: cover;
 }
 
+.scores {
+  background: linear-gradient(to bottom right, rgba(13, 43, 13, 0.60) 0%, rgba(199, 176, 112, 0.4) 100%);
+  padding: 2%;
+}
 /*******************************
-            structure
+            images
 *******************************/
+.ui.mini.image { width: 50px;}
 
 
 /*******************************
@@ -30,6 +35,7 @@ input,
 label,
 .ui.dropdown,
 .ui.button,
+.extra,
 ::-webkit-input-placeholder {
   color: $dark-color;
   font-family: $heading-font

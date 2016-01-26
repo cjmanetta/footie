@@ -20,7 +20,7 @@ gem 'react-rails', '~> 1.0'
 
 group :development, :test  do
   gem 'pry-rails'
-  gem 'pry-byebug'
+  # gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'selenium-webdriver'

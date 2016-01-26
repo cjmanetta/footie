@@ -11,7 +11,7 @@ var Scoreboard = React.createClass({
 
     return (
       <div className="ui inverted segment">
-        <img className="headline-image ui fluid image" src={"<%= asset_url('scoreboard.png') %>"} />
+        <img className="headline-image ui fluid image" src={"/assets/scoreboard.png"} />
         <div className="container">
         <table  className="ui unstackable striped table">
           {scores}

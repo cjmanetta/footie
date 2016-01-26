@@ -105,6 +105,10 @@ body
   border: 5px solid white !important;
   border-radius: 2px !important;
 }
+.ui.fluid.inverted.button {
+  border: 1px solid white;
+  font-family: $heading-font;
+}
 
 .ui.fluid.button {
   border: 3px solid white;

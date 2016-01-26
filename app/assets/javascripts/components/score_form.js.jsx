@@ -47,11 +47,12 @@ var ScoreForm = React.createClass({
         <div className="field">
           <PlayerSelector ref="playerSelector" />
         </div>
+
         <div className="field">
-        <div className="ui action input">
-          <input type="number" value={this.state.score} onChange={this._handleChange} placeholder="points" ref="scoreValue" />
-          <button type="submit" className="ui button">record</button>
-        </div>
+          <div className="ui small action input">
+            <input type="number" value={this.state.score} onChange={this._handleChange} placeholder="points" ref="scoreValue" />
+            <button type="submit" className="ui small button">record</button>
+          </div>
         </div>
       </form>
     )

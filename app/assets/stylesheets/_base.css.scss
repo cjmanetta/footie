@@ -1,0 +1,49 @@
+/*******************************
+            background
+*******************************/
+body { background: url('whitesand.png') center center fixed;}
+
+.home {
+  background: url('grass.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.scores {
+  background: linear-gradient(to bottom right, rgba(13, 43, 13, 0.60) 0%, rgba(199, 176, 112, 0.4) 100%);
+  padding: 2%;
+}
+/*******************************
+            images
+*******************************/
+.ui.mini.image { width: 50px;}
+
+
+/*******************************
+            typography
+*******************************/
+
+html {
+  font-family: $main-font;
+  color: $dark-color;
+}
+
+h1, h2, h3, h4, h6,
+input,
+label,
+.ui.dropdown,
+.ui.button,
+.extra,
+::-webkit-input-placeholder {
+  color: $dark-color;
+  font-family: $heading-font
+}
+
+.ui.button,
+.ui.checkbox {
+    font-weight: bold;
+    font-size: 22px;
+}
+

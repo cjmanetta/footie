@@ -1,0 +1,26 @@
+.ui.grid.container {
+  height: 100%;
+  .column { width: 500px;}
+}
+
+
+/*******************************
+    pointing menu overrides
+*******************************/
+.ui.secondary.pointing.menu {
+  a.item, a.active.item {
+    font: bold 2em $heading-font;
+    color: white;
+    &:hover { color: $trans-white;}
+  }
+  .active.item:hover { border-bottom: 3px solid $trans-white;}
+  .active.item { border-bottom: 3px solid white;}
+}
+
+/*******************************
+    tabbed segment overrides
+*******************************/
+.ui.bottom.attached.tab.segment {
+  border: 3px solid white;
+  &[data-tab="second"] { border: 3px solid white;}
+}

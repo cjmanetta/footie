@@ -10,7 +10,8 @@ class UsersController < ApplicationController
     @total_scores = @players.map {|player| player.total_score}
 
     @players.each_with_index do |player, index|
-      player_hash = {"firstname" => @players[index].firstname, "score" => @total_scores[index]  }
+      p player.profile_photo
+      player_hash = {"firstname" => player.firstname, "score" => @total_scores[index], "photo" => player.profile_photo }
       @totals_array << player_hash
     end
 

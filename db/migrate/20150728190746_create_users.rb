@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.boolean :admin, default: false
       t.string :username
       t.string :password_digest
+      t.string :profile_photo
 
       t.timestamps null: false
     end

@@ -1,0 +1,8 @@
+.ui.fluid.button {
+  border: 1.5px solid white;
+}
+
+.ui.checkbox {
+  input:focus ~ label { color: white;}
+  label, label:visited, label:hover { color: white;}
+}

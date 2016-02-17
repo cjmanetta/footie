@@ -1,6 +1,7 @@
 var Scoreboard = React.createClass({
 
   render: function() {
+    var imagePath = "<%= asset_path('scoreboard.png') %>";
     this.props.scores.sort(function(a, b) {
       return b.score - a.score;
     });
@@ -11,7 +12,7 @@ var Scoreboard = React.createClass({
 
     return (
       <div className="ui inverted segment">
-        <img className="headline-image ui fluid image" src={"/assets/scoreboard.png"} />
+        <img className="headline-image ui fluid image" src={imagePath} />
         <div className="container">
         <table  className="ui unstackable striped table">
           {scores}

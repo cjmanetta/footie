@@ -1,0 +1,165 @@
+/*
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600|Roboto+Slab:300);
+/*******************************
+            background
+*******************************/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css);
+/* line 4, /Users/charlotte/dbc/footie/app/assets/stylesheets/_base.css.scss */
+body {
+  background: url("whitesand.png") center center fixed;
+}
+
+/* line 6, /Users/charlotte/dbc/footie/app/assets/stylesheets/_base.css.scss */
+.home {
+  background: url("grass.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 14, /Users/charlotte/dbc/footie/app/assets/stylesheets/_base.css.scss */
+.scores {
+  background: linear-gradient(to bottom right, rgba(13, 43, 13, 0.6) 0%, rgba(199, 176, 112, 0.4) 100%);
+  padding: 2%;
+}
+
+/*******************************
+            images
+*******************************/
+/* line 21, /Users/charlotte/dbc/footie/app/assets/stylesheets/_base.css.scss */
+.ui.mini.image {
+  width: 50px;
+}
+
+/*******************************
+            typography
+*******************************/
+/* line 28, /Users/charlotte/dbc/footie/app/assets/stylesheets/_base.css.scss */
+html {
+  font-family: "Open Sans", sans-serif;
+  color: #50514c;
+}
+
+/* line 33, /Users/charlotte/dbc/footie/app/assets/stylesheets/_base.css.scss */
+h1, h2, h3, h4, h6,
+input,
+label,
+.ui.dropdown,
+.ui.button,
+.extra,
+::-webkit-input-placeholder {
+  color: #50514c;
+  font-family: "Roboto Slab", serif;
+}
+
+/* line 44, /Users/charlotte/dbc/footie/app/assets/stylesheets/_base.css.scss */
+.ui.button,
+.ui.checkbox {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* line 1, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_landing.css.scss */
+.ui.grid.container {
+  height: 100%;
+}
+/* line 3, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_landing.css.scss */
+.ui.grid.container .column {
+  width: 500px;
+}
+
+/*******************************
+    pointing menu overrides
+*******************************/
+/* line 11, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_landing.css.scss */
+.ui.secondary.pointing.menu a.item, .ui.secondary.pointing.menu a.active.item {
+  font: bold 2em "Roboto Slab", serif;
+  color: white;
+}
+/* line 14, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_landing.css.scss */
+.ui.secondary.pointing.menu a.item:hover, .ui.secondary.pointing.menu a.active.item:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+/* line 16, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_landing.css.scss */
+.ui.secondary.pointing.menu .active.item:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.65);
+}
+/* line 17, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_landing.css.scss */
+.ui.secondary.pointing.menu .active.item {
+  border-bottom: 3px solid white;
+}
+
+/*******************************
+    tabbed segment overrides
+*******************************/
+/* line 23, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_landing.css.scss */
+.ui.bottom.attached.tab.segment {
+  border: 3px solid white;
+}
+/* line 25, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_landing.css.scss */
+.ui.bottom.attached.tab.segment[data-tab="second"] {
+  border: 3px solid white;
+}
+
+/* line 1, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_interface.css.scss */
+.ui.secondary.inverted.menu {
+  background-color: #50514c;
+  height: 85px;
+  margin-bottom: 0px;
+}
+
+/* line 7, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_interface.css.scss */
+.ui.fluid.button {
+  border: 1.5px solid white;
+}
+
+/* line 12, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_interface.css.scss */
+.ui.checkbox input:focus ~ label {
+  color: white;
+}
+/* line 13, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_interface.css.scss */
+.ui.checkbox label, .ui.checkbox label:visited, .ui.checkbox label:hover {
+  color: white;
+}
+
+/* line 1, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_scoreboard.css.scss */
+.scoreboard {
+  max-width: 400px;
+}
+/* line 3, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_scoreboard.css.scss */
+.scoreboard .headline-image {
+  margin-bottom: 24px;
+}
+/* line 4, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_scoreboard.css.scss */
+.scoreboard .ui.inverted.segment {
+  background: #50514c;
+}
+/* line 5, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_scoreboard.css.scss */
+.scoreboard .container {
+  height: 450px;
+  overflow: scroll;
+  margin-top: 5px;
+  border-bottom: 56px solid #50514c;
+}
+
+/* line 13, /Users/charlotte/dbc/footie/app/assets/stylesheets/modules/_scoreboard.css.scss */
+.new-score.middle.aligned.column {
+  max-width: 350px;
+}

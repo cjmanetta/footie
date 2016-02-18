@@ -1,12 +1,12 @@
 var Score = React.createClass({
 
   render: function() {
-    var photoPath = "<%= compute_asset_path('becky.png') %>"
+    var photo = "assets/" + this.props.score.photo
 
     return (
       <tr>
           <td className="single line center aligned">
-            <img className="ui mini circular centered image" src={photoPath} />
+            <img className="ui mini circular centered image" src={photo} />
             <p className="extra">{this.props.score.firstname}</p>
           </td>
           <td className="single line center aligned">

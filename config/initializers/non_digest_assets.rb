@@ -1,1 +1,1 @@
-NonStupidDigestAssets.whitelist += [/profile*.*/]
+NonStupidDigestAssets.whitelist += [!/^(profile*.*)/]

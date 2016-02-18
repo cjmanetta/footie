@@ -18,6 +18,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 gem 'react-rails', '~> 1.0'
 
+gem "non-stupid-digest-assets"
+
 group :development, :test  do
   gem 'pry-rails'
   # gem 'pry-byebug'

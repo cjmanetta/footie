@@ -7,7 +7,7 @@ User.create(
   birthdate: Date.parse('2003-10-20'),
   username:"hsolo",
   password: "1234",
-  profile_photo: "hope.png")
+  profile_photo: "profile_hope.png")
 
 
 User.create(
@@ -17,7 +17,7 @@ User.create(
   birthdate: Date.parse('2003-10-20'),
   username:"bsauerbrunn",
   password: "1234",
-  profile_photo: "becky.png")
+  profile_photo: "profile_becky.png")
 
 User.create(
   admin: false,
@@ -26,7 +26,7 @@ User.create(
   birthdate: Date.parse('2004-12-15'),
   username:"mrapinoe",
   password: "1234",
-  profile_photo: "megan.png")
+  profile_photo: "profile_megan.png")
 
 User.create(
   admin: false,
@@ -35,7 +35,7 @@ User.create(
   birthdate: Date.parse('2003-08-02'),
   username:"kohara",
   password: "1234",
-  profile_photo: "kelley.png")
+  profile_photo: "profile_kelley.png")
 
 User.create(
   admin: false,
@@ -44,7 +44,7 @@ User.create(
   birthdate: Date.parse('2004-01-12'),
   username:"clloyd",
   password: "1234",
-  profile_photo: "lloyd.png")
+  profile_photo: "profile_lloyd.png")
 
 # coaches
 User.create(
@@ -54,7 +54,7 @@ User.create(
   birthdate: Date.parse('1984-11-24'),
   username:"cjmanetta",
   password: "1234",
-  profile_photo: "charlotte.png")
+  profile_photo: "profile_charlotte.png")
 
 User.create(
   admin: true,
@@ -63,7 +63,7 @@ User.create(
   birthdate: Date.parse('1960-06-02'),
   username:"jellis",
   password: "1234",
-  profile_photo: "jill.png")
+  profile_photo: "profile_jill.png")
 
   Activity.create(
     title: "Ronaldo Chop",

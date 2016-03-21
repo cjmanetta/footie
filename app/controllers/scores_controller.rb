@@ -16,7 +16,11 @@ class ScoresController < ApplicationController
     @score = Score.new(score_params)
 
     if @score.save
-      redirect_to user_path(current_user)
+      if request.xhr?
+        render json: { score: @score.value }
+      else
+        flash[:notice] = "there was a problem"
+      end
     else
       render 'new'
     end

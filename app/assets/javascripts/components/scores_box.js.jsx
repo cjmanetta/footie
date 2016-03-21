@@ -25,6 +25,7 @@ var ScoresBox = React.createClass({
   },
 
   onSuccess: function(response) {
+    debugger;
     this.setState({scores: response.scores});
     this.refs.scoreForm.clearForm();
   },

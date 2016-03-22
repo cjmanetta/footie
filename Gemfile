@@ -16,7 +16,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
-gem 'react-rails', '~> 1.0'
+gem 'react-rails', '~> 1.6.0'
+gem "browserify-rails"
 
 gem "non-stupid-digest-assets"
 

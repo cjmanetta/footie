@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 
+
 //TODO: remove when hooked up to server
 const constructPlayers = () => {
 	return [
@@ -11,11 +12,30 @@ const constructPlayers = () => {
 
 //TODO: remove when hooked up to server
 const constructChallenges = () => {
-	return [
-			{id: 1, title: "Ronaldo Chop"},
-			{id: 2, title: "Juggling"},
-			{id: 3, title: "Maradona"}
-		];
+	
+	let challenges = [];
+
+	 $.ajax({
+		url: '/activities',
+		type: 'get',
+		dataType: 'json',
+		success: (response) => {
+			challenges.push(...response)
+		},
+		error: (data) => {
+			console.log(data)
+			console.error("there was a problem getting the challenges");
+		}
+	})
+
+	
+
+	// console.log(response);
+	// return [
+	// 		{id: 1, title: "Ronaldo Chop"},
+	// 		{id: 2, title: "Juggling"},
+	// 		{id: 3, title: "Maradona"}
+	// 	];
 };
 
 const score = (state, action) => {

@@ -1,10 +1,12 @@
 import React from 'react';
+import { fetchChallenges } from '../actions';
 
 class ChallengeSelector extends React.Component {
 
 	componentDidMount() {
 		const { store } = this.context;
 		this.unsubscribe = store.subscribe(() => this.forceUpdate());
+		store.dispatch(fetchChallenges());
 	}
 
 	componentWillUnmount() {

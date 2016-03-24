@@ -13,30 +13,30 @@ const constructPlayers = () => {
 
 
 //TODO: remove when hooked up to server
-const constructChallenges = (state) => {
-	let challenges = [];
-	// $.get('/activities', (response) => {challenges.push(...reponse)})
-	 $.ajax({
-		url: '/activities',
-		type: 'get',
-		dataType: 'json',
-		success: (response) => {
-			challenges.push(...response)
-			console.log('i am a full array but i get called on line 25',challenges)
-			return challenges
-		},
-		error: (data) => {
-			console.log(data)
-			console.error("there was a problem getting the challenges");
-		}
-	})
-	console.log('i am an empty array but i get called on line 33', challenges)
-	// return [
-	// 		{id: 1, title: "Ronaldo Chop"},
-	// 		{id: 2, title: "Juggling"},
-	// 		{id: 3, title: "Maradona"}
-	// 	];
-};
+// const constructChallenges = (state) => {
+// 	let challenges = [];
+// 	// $.get('/activities', (response) => {challenges.push(...reponse)})
+// 	 $.ajax({
+// 		url: '/activities',
+// 		type: 'get',
+// 		dataType: 'json',
+// 		success: (response) => {
+// 			challenges.push(...response)
+// 			console.log('i am a full array but i get called on line 25',challenges)
+// 			return challenges
+// 		},
+// 		error: (data) => {
+// 			console.log(data)
+// 			console.error("there was a problem getting the challenges");
+// 		}
+// 	})
+// 	console.log('i am an empty array but i get called on line 33', challenges)
+// 	// return [
+// 	// 		{id: 1, title: "Ronaldo Chop"},
+// 	// 		{id: 2, title: "Juggling"},
+// 	// 		{id: 3, title: "Maradona"}
+// 	// 	];
+// };
 
 const score = (state, action) => {
 	switch (action.type) {
@@ -69,7 +69,7 @@ const constructScores = (state, action) => {
 const initialState = {
 	scores: [],
 	players: constructPlayers(),
-	challenges: constructChallenges(),
+	challenges: [],
 	selectorCache: {
 		player: null, 
 		challenge: null
@@ -78,6 +78,8 @@ const initialState = {
 
 const scoresApp = (state =	initialState, action) => {
 	switch(action.type) {
+		case 'RECEIVE_CHALLENGES':
+			return Object.assign({}, state, { challenges: action.payload.challenges });
 		case 'SELECT_PLAYER':
 			return {
 				...state,

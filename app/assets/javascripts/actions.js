@@ -2,24 +2,30 @@ import React from 'react';
 import fetch from 'isomorphic-fetch';
 
 export function fetchChallenges() {
+	console.log("im in here");
 	return function(dispatch) {
-		return fetch('/activities',
-				{
-					headers: {
-						
-					}
-				}
-			) {
-
-		}
+		return fetch('/activities', {
+										method: 'get',
+										headers: {
+											'Content-Type': 'json',
+											'Accept': 'application/json'
+						}})
+						.then(response => response.json())
+						.then(json => {
+							dispatch(receiveChallenges(json));
+						});
+									
 	};
-	
 };
 
-export function getChallenges(challenges) {
-
-
-;}
+export function receiveChallenges(challenges) {
+	return {
+		type: 'RECEIVE_CHALLENGES',
+		payload: {
+			challenges
+		}
+	};
+}
 
 
 const getFilteredScores = (scores, player, targetArray) => {

@@ -27,6 +27,31 @@ export function receiveChallenges(challenges) {
 	};
 }
 
+export function fetchPlayers() {
+	console.log("im in here");
+	return function(dispatch) {
+		return fetch('/users', {
+										method: 'get',
+										headers: {
+											'Content-Type': 'json',
+											'Accept': 'application/json'
+						}})
+						.then(response => response.json())
+						.then(json => {
+							dispatch(receivePlayers(json));
+						});
+									
+	};
+};
+
+export function receivePlayers(players) {
+	return {
+		type: 'RECEIVE_PLAYERS',
+		payload: {
+			players
+		}
+	};
+}
 
 const getFilteredScores = (scores, player, targetArray) => {
 	targetArray = scores.filter((score) => {
@@ -63,7 +88,7 @@ const getSortedScores = (state) => {
 		filteredScoreValues = getFilteredScoreValues(filteredScores, filteredScoreValues);
 		reducedScores = reduceScores(filteredScoreValues);
 
-		sortedScores.push({player: player.name, value: reducedScores});
+		sortedScores.push({player: player.firstname, value: reducedScores});
 	});
 
 	return sortedScores.sort((a, b) => { return b.value - a.value;});

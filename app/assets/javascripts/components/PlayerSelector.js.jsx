@@ -1,10 +1,13 @@
 import React from 'react';
+import { fetchPlayers } from '../actions';
+
 
 class PlayerSelector extends React.Component {
 
 	componentDidMount() {
 		const { store } = this.context;
 		this.unsubscribe = store.subscribe(() => this.forceUpdate());
+		store.dispatch(fetchPlayers());
 	}
 
 	componentWillUnmount() {
@@ -17,7 +20,7 @@ class PlayerSelector extends React.Component {
 		const state = store.getState();
 
 		const players = state.players.map(player => {
-			return <option value={player.id} key={player.id}>{player.name}</option>
+			return <option value={player.id} key={player.id}>{player.firstname}</option>
 		});
 
 		return (

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-
+import ReduxThunk from 'redux-thunk';
 
 //TODO: remove when hooked up to server
 const constructPlayers = () => {
@@ -10,27 +10,27 @@ const constructPlayers = () => {
 		];
 };
 
-//TODO: remove when hooked up to server
-const constructChallenges = () => {
-	
-	let challenges = [];
 
+
+//TODO: remove when hooked up to server
+const constructChallenges = (state) => {
+	let challenges = [];
+	// $.get('/activities', (response) => {challenges.push(...reponse)})
 	 $.ajax({
 		url: '/activities',
 		type: 'get',
 		dataType: 'json',
 		success: (response) => {
 			challenges.push(...response)
+			console.log('i am a full array but i get called on line 25',challenges)
+			return challenges
 		},
 		error: (data) => {
 			console.log(data)
 			console.error("there was a problem getting the challenges");
 		}
 	})
-
-	
-
-	// console.log(response);
+	console.log('i am an empty array but i get called on line 33', challenges)
 	// return [
 	// 		{id: 1, title: "Ronaldo Chop"},
 	// 		{id: 2, title: "Juggling"},

@@ -1,15 +1,15 @@
-import ScoresApp from './reducers/scores';
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import React from 'react';
+import ScoresApp from './reducers/scores';
+import thunkMiddleware from 'redux-thunk';
 
 export default function configureStore(initialState) {
   const store = createStore(
   	ScoresApp, 
   	initialState,
-  	applyMiddleware(thunk),
+  	applyMiddleware(thunkMiddleware),
     window.devToolsExtension ? window.devToolsExtension() : undefined
   );
+  
   return store;
 }
 

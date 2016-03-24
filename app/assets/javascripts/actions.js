@@ -1,4 +1,26 @@
 import React from 'react';
+import fetch from 'isomorphic-fetch';
+
+export function fetchChallenges() {
+	return function(dispatch) {
+		return fetch('/activities',
+				{
+					headers: {
+						
+					}
+				}
+			) {
+
+		}
+	};
+	
+};
+
+export function getChallenges(challenges) {
+
+
+;}
+
 
 const getFilteredScores = (scores, player, targetArray) => {
 	targetArray = scores.filter((score) => {

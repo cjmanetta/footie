@@ -4,6 +4,11 @@ class ScoresController < ApplicationController
       render '_show'
   end
 
+  def index
+    scores = Score.all
+    render json: scores
+  end
+
   def new
     @score = Score.new
   end

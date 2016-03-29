@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   }
 
   scope constraints: ACCEPTS_JSON do
-    resources :scores, except: [:index]
+    resources :scores
     resources :activities
     resources :users, only: [:index]
   end

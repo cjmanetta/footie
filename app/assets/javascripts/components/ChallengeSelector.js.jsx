@@ -8,7 +8,7 @@ class ChallengeSelector extends React.Component {
 		this.unsubscribe = store.subscribe(() => this.forceUpdate());
 		store.dispatch(fetchChallenges());
 	}
-
+	
 	componentWillUnmount() {
 		this.unsubscribe();
 	}
@@ -16,8 +16,7 @@ class ChallengeSelector extends React.Component {
 	render() {
 		const { store } = this.context;
 		const state = store.getState();
-
-		const challenges = state.challenges.map(challenge => {
+			const challenges = state.challenges.map(challenge => {
 			return <option value={challenge.id} key={challenge.id}>{challenge.title}</option>
 		});
 

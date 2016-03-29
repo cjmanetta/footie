@@ -16,7 +16,7 @@ const ScoresList = ({
 			{scores.map(score => 
 				<Score 
 					key={nextSortedScoreId++}
-					score={score}			
+					score={score}	
 				/>
 			)}
 		</ul>

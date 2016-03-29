@@ -1,25 +1,36 @@
 require 'json'
-
+# id: action.id,
+#         value: action.value,
+#         player: action.player,
+#         challenge: action.challenge
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @players = User.players
     @score = Score.new
     @activities = Activity.all
-    @totals_array = []
-    @total_scores = @players.map {|player| player.total_score}
+    @scores = []
 
-    @players.each_with_index do |player, index|
-      p player.profile_photo
-      player_hash = {"firstname" => player.firstname, "score" => @total_scores[index], "photo" => player.profile_photo }
-      @totals_array << player_hash
+    @players.each do |player|
+      players_hash = { 
+        "name" => player.firstname,
+        "scores" => player.scores.map {|score| {
+          "id" => score.id, 
+          "value" => score.value, 
+          "challenge" => Activity.challenges.find(score.activity_id).id
+        }}
+      }
+
+
+      # player_hash = {"firstname" => player.firstname, "scores" => player.scores., "photo" => player.profile_photo }
+      @scores << players_hash
     end
 
     gon.user_id = @user.id
 
 
     if request.xhr?
-      render json: { scores: @totals_array }
+      render json: { scores: @scores }
     else
       if @user.admin == true
         render 'users/coaches/dashboard'

@@ -1,14 +1,6 @@
 import { combineReducers } from 'redux';
+import { addNewScore } from '../actions';
 import ReduxThunk from 'redux-thunk';
-
-//TODO: remove when hooked up to server
-const constructPlayers = () => {
-	return [
-			{id: 1, name: "Carli Lloyd"},
-			{id: 2, name: "Becky Sauerbrunn"},
-			{id: 3, name: "Hope Solo"}
-		];
-};
 
 const score = (state, action) => {
 	switch (action.type) {
@@ -25,17 +17,18 @@ const score = (state, action) => {
 };
 
 
-const constructScores = (state, action) => {
-	switch(action.type) {
-		case 'ADD_SCORE':
-			return [
-					...state.scores,
-					score(undefined, action)
-			];
-		default:
-			return state;
-	}
-};
+// const constructScores = (state, action) => {
+// 	switch(action.type) {
+// 		case 'ADD_SCORE':
+// 			return {
+// 				...state,
+// 				scores: addNewScore(state, action);
+
+// 			}
+// 		default:
+// 			return state;
+// 	}
+// };
 
 // TODO: this initial state should be loaded from the server
 const initialState = {
@@ -54,12 +47,15 @@ const scoresApp = (state =	initialState, action) => {
 			return Object.assign({}, state, { challenges: action.payload.challenges });
 		case 'RECEIVE_PLAYERS':
 			return Object.assign({}, state, { players: action.payload.players });
+		case 'RECEIVE_SCORES':
+			return Object.assign({}, state, { scores: action.payload.scores });
 		case 'SELECT_PLAYER':
 			return {
 				...state,
 				selectorCache: {
 					...state.selectorCache,
-					player: action.id
+					player: action.id,
+					firstname: action.firstname
 				}
 			};
 		case 'SELECT_CHALLENGE':
@@ -73,7 +69,7 @@ const scoresApp = (state =	initialState, action) => {
 		case 'ADD_SCORE':
 			return {
 				...state,
-				scores: constructScores(state, action),
+				scores: addNewScore(state, action),
 				selectorCache: {
 					player: null, 
 					challenge: null

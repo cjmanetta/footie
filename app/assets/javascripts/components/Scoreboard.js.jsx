@@ -1,6 +1,6 @@
 import React from 'react';
 import ScoresList from './scoreslist.js.jsx';
-import { getSortedScores } from '../actions';
+import { getSortedScores, fetchScores } from '../actions';
 
 class Scoreboard extends React.Component {
 
@@ -9,6 +9,7 @@ class Scoreboard extends React.Component {
 		this.unsubscribe = store.subscribe(() =>
 			this.forceUpdate()
 		);
+		store.dispatch(fetchScores());
 	}
 
 	componentWillUnmount() {
@@ -18,9 +19,11 @@ class Scoreboard extends React.Component {
 	render() {
 		const { store } = this.context;
 		const state = store.getState();
+		const scores = state.scores;
+
 
 		return (
-			<div><ScoresList scores={ getSortedScores(state) } /></div>
+			<div><ScoresList scores={ scores } /></div>
 		)
 	}
 };

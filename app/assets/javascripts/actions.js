@@ -105,7 +105,7 @@ export function addNewScore(state, action) {
 	
 	currentScores.forEach (score => {
 		if(score.player == name) {
-			score.value += parseInt(action.value)
+			score.value = parseInt(score.value) + parseInt(action.value)
 		}
 	})
 

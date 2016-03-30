@@ -2,38 +2,19 @@ import { combineReducers } from 'redux';
 import { addNewScore, postScore } from '../actions';
 import ReduxThunk from 'redux-thunk';
 
-const score = (state, action) => {
-	switch (action.type) {
-		case 'ADD_SCORE':
-			return {
-				id: action.id,
-				value: action.value,
-				player: action.player,
-				challenge: action.challenge
-			};
-		default:
-			return state;
-	}
-};
-
-// const getToken = (state) => {
-
-// 	document.querySelector("meta[name='csrf-token']").content
-// }
-// const constructScores = (state, action) => {
-// 	switch(action.type) {
+// const score = (state, action) => {
+// 	switch (action.type) {
 // 		case 'ADD_SCORE':
 // 			return {
-// 				...state,
-// 				scores: addNewScore(state, action);
-
-// 			}
+// 				value: action.value,
+// 				player: action.player,
+// 				challenge: action.challenge
+// 			};
 // 		default:
 // 			return state;
 // 	}
 // };
 
-// TODO: this initial state should be loaded from the server
 const initialState = {
 	scores: [],
 	players: [],
@@ -73,7 +54,7 @@ const scoresApp = (state =	initialState, action) => {
 			postScore(action, state)
 			return {
 				...state,
-				scores: addNewScore(state, action),
+				scores: Object.assign({}, state.scores, { scores: [...state.scores, addNewScore(state, action] })
 				selectorCache: {
 					player: null, 
 					challenge: null

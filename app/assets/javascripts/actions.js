@@ -87,7 +87,7 @@ export function postScore(score, { token }) {
 										},
 										body: newScore
 						})
-						.then(console.log("got in here"))
+						.then()
 };
 
 export function receiveScores(scores) {
@@ -113,6 +113,7 @@ export function addNewScore(state, action) {
 }
 
 const getSortedScores = (data) => {
+	debugger
 	let players = data.scores;
 	let players_values = [];
 	let reducedScore

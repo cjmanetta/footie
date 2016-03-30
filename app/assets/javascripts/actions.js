@@ -77,7 +77,6 @@ export function postScore(score, { token }) {
 			activity_id: score.challenge,
 			user_id: score.player
 		})
-	debugger
 	fetch('/scores', {
 										method: 'post',
 										headers: {
@@ -127,7 +126,7 @@ const getSortedScores = (data) => {
 			})
 			reducedScore = players_values.reduce((prev, curr) => prev + curr);
 		} else {
-			return [0];
+			reducedScore = [0];
 		}
 
 		sortedScores.push({player: player.name, value: reducedScore});

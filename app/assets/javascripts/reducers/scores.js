@@ -41,8 +41,7 @@ const initialState = {
 	selectorCache: {
 		player: null, 
 		challenge: null
-	},
-	token: document.querySelector("meta[name='csrf-token']").content
+	}
 };
 
 const scoresApp = (state =	initialState, action) => {

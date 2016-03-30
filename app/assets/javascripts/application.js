@@ -4,5 +4,5 @@
 //= require components
 
 window.$ = window.jQuery = global.$ = require('jquery');
-var React = window.React = global.React = require('react');
 require( 'jquery-ujs' );
+var React = window.React = global.React = require('react');

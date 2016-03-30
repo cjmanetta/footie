@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { addNewScore } from '../actions';
+import { addNewScore, postScore } from '../actions';
 import ReduxThunk from 'redux-thunk';
 
 const score = (state, action) => {
@@ -16,7 +16,10 @@ const score = (state, action) => {
 	}
 };
 
+// const getToken = (state) => {
 
+// 	document.querySelector("meta[name='csrf-token']").content
+// }
 // const constructScores = (state, action) => {
 // 	switch(action.type) {
 // 		case 'ADD_SCORE':
@@ -38,7 +41,8 @@ const initialState = {
 	selectorCache: {
 		player: null, 
 		challenge: null
-	}
+	},
+	token: document.querySelector("meta[name='csrf-token']").content
 };
 
 const scoresApp = (state =	initialState, action) => {
@@ -67,6 +71,7 @@ const scoresApp = (state =	initialState, action) => {
 				}
 			};
 		case 'ADD_SCORE':
+			postScore(action, state)
 			return {
 				...state,
 				scores: addNewScore(state, action),

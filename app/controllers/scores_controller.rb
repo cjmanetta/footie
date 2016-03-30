@@ -1,4 +1,6 @@
 class ScoresController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def show
     @score = Score.find(params[:id])
       render '_show'
@@ -18,9 +20,12 @@ class ScoresController < ApplicationController
   end
 
   def create
+
     @score = Score.new(score_params)
 
-    if @score.save
+    if @score.save && request.xhr?
+      render json: @score
+    elsif @score.save
       redirect_to user_path(current_user)
     else
       render 'new'

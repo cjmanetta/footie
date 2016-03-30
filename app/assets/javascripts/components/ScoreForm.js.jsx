@@ -23,6 +23,7 @@ class ScoreForm extends React.Component {
 		let challengeSelector;
 		const { store } = this.context;
 		const state = store.getState();
+		let token = state.token
 
 		const clearForm = () => {
 			input.value = '';
@@ -31,7 +32,8 @@ class ScoreForm extends React.Component {
 		}
 
 		return (
-			<form 
+			<form
+				data-remote="true" 
 				onSubmit={(event) => {
 					event.preventDefault();
 					store.dispatch({
@@ -39,7 +41,8 @@ class ScoreForm extends React.Component {
 								id: nextScoreId++,
 								value: input.value,
 								player: state.selectorCache.player,
-								challenge: state.selectorCache.challenge
+								challenge: state.selectorCache.challenge,
+								token
 							});
 					clearForm();
 				}}> 

@@ -17,7 +17,6 @@ class Scoreboard extends React.Component {
 	}
 
 	render() {
-		// let imagePath = "<%= asset_path('scoreboard.png') %>"
 		const { store } = this.context;
 		const state = store.getState();
 		const scores = state.scores;
@@ -25,7 +24,11 @@ class Scoreboard extends React.Component {
 
 		return (
 			<div className="ui inverted segment">
-				
+				<img 
+					src="/assets/scoreboard.png" 
+					alt="scoreboard" 
+					className="headline-image ui fluid image"
+				/>
 				<div className="container">
 					<ScoresList scores={ scores } />
 				</div>
@@ -38,5 +41,5 @@ Scoreboard.contextTypes = {
 	store: React.PropTypes.object
 };
 
-// <img src={ imagePath } alt="scoreboard" className="headline-image ui fluid image"/>
+
 export default Scoreboard;

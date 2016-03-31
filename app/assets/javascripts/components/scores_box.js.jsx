@@ -32,7 +32,7 @@ var ScoresBox = React.createClass({
 
   render: function() {
     return (
-      <article className="ui two column stackable center aligned grid container">
+      <article className="">
         <div className="scoreboard column">
           <Scoreboard scores={this.state.scores} />
         </div>

@@ -31,7 +31,6 @@ class PlayerSelector extends React.Component {
 						type: 'SELECT_PLAYER',
 						id: this.selection.value
 					});
-
 				}}
 				ref={node => { this.selection = node;}}
 				>

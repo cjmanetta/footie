@@ -4,21 +4,13 @@ import ChallengeSelector from './challengeselector.js.jsx';
 
 
 let nextScoreId = 1;
-const setDisabledAttribute = () => { 
-	if(!state.selectorCache.player || !state.selectorCache.challenge){
-		let button = document.querySelector("button")
-		let attribute = document.createAttribute("disabled")
 
-		return button.setAttributeNode(attribute)
-	}
-}
 
 class ScoreForm extends React.Component {
 
 	componentDidMount() {
 		const { store } = this.context;
 		this.unsubscribe = store.subscribe(() => this.forceUpdate());
-		setDisabledAttribute()
 	}
 
 	componentWillUnmount() {
@@ -39,6 +31,7 @@ class ScoreForm extends React.Component {
 			playerSelector.selection.value = playerSelector.defaultSelection.value;
 			challengeSelector.selection.value = challengeSelector.defaultSelection.value;
 		}
+
 		return (
 			<form
 				data-remote="true" 
@@ -54,14 +47,14 @@ class ScoreForm extends React.Component {
 					clearForm();
 				}}> 
 				<PlayerSelector 
-					ref={node => {playerSelector = node}} 
+					ref={node => {playerSelector = node}}
 				/>
 				<ChallengeSelector 
-					ref={node => {challengeSelector = node}} 
+					ref={node => {challengeSelector = node}}
 				/>
 				<input type="number" ref={node => {input = node;}}/>
 				<button
-					type="submit" {attribute} >
+					type="submit">
 					record
 				</button>
 			</form>

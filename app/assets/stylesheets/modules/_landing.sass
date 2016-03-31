@@ -1,0 +1,65 @@
+.ui.grid.container 
+  .column  
+    width: 500px
+  
+  .logo
+    margin: 0px auto
+    background-image: url(footie_logo.svg)
+    width: 70px
+    height: 190px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+
+  
+
+// pointing menu overrides
+.ui.secondary.pointing.menu 
+  a.item, a.active.item 
+    font: bold 2em $heading-font
+    color: white
+    &:hover  
+      color: $trans-white
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.8)
+  
+  .active.item:hover  
+    border-bottom: 3px solid $trans-white
+  .active.item  
+    border-bottom: 3px solid white
+
+
+
+// tabbed segment overrides
+.ui.bottom.attached.tab.segment 
+  border: 3px solid white
+  &[data-tab="second"]  
+    border: 3px solid white
+
+
+
+
+// button overrides 
+
+.ui.inverted.button 
+  background: #fff
+  box-shadow: 0 0 0 2px #fff inset!important
+  color: rgba(0,0,0,.8)
+  &:hover 
+    border: 1.5px solid white
+    background: rgba(0, 0, 0, .2)
+    color: white
+    
+  
+
+
+.login.ui.inverted.button 
+  border: 1.5px solid white
+  background: rgba(0, 0, 0, .2)
+  color: white
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.8) !important
+  &:hover 
+    background: #fff
+    box-shadow: 0 0 0 2px #fff inset!important
+    color: rgba(0,0,0,.8)
+    
+  

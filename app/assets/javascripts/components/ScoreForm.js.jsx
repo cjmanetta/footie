@@ -1,6 +1,6 @@
 import React from 'react';
-// import PlayerSelector from './playerselector.js.jsx';
-// import ChallengeSelector from './challengeselector.js.jsx';
+import PlayerSelector from './playerselector.js.jsx';
+import ChallengeSelector from './challengeselector.js.jsx';
 
 
 let nextScoreId = 1;
@@ -49,11 +49,14 @@ class ScoreForm extends React.Component {
 				}}>
 				<h2>add a score</h2>
 				<div className="field">
-					<p>player selector</p>
-					
+					<PlayerSelector 
+						ref={node => {playerSelector = node}}
+					/>
 				</div>
 				<div className="field">
-					<p>challenge selector</p>
+					<ChallengeSelector 
+						ref={node => {challengeSelector = node}}
+					/>
 				</div>
 				<div className="field">
 					<div className="ui small action input">
@@ -79,12 +82,10 @@ ScoreForm.contextTypes = {
 	store: React.PropTypes.object
 };
 
-// <ChallengeSelector 
-// 						ref={node => {challengeSelector = node}}
-// 					/>
 
-// <PlayerSelector 
-// 						ref={node => {playerSelector = node}}
-// 					/>
+
+<PlayerSelector 
+						ref={node => {playerSelector = node}}
+					/>
 
 export default ScoreForm;

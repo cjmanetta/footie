@@ -1,5 +1,5 @@
 import React from 'react';
-// import ScoresList from './scoreslist.js.jsx';
+import ScoresList from './scoreslist.js.jsx';
 import { getSortedScores, fetchScores } from '../actions';
 
 class Scoreboard extends React.Component {
@@ -27,7 +27,7 @@ class Scoreboard extends React.Component {
 			<div className="ui inverted segment">
 				
 				<div className="container">
-					<p>scores list component line 40</p>
+					<ScoresList scores={ scores } />
 				</div>
 			</div>
 		)
@@ -37,6 +37,6 @@ class Scoreboard extends React.Component {
 Scoreboard.contextTypes = {
 	store: React.PropTypes.object
 };
-// <ScoresList scores={ scores } />
+
 // <img src={ imagePath } alt="scoreboard" className="headline-image ui fluid image"/>
 export default Scoreboard;

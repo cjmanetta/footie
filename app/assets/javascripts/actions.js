@@ -66,6 +66,7 @@ export function fetchScores() {
 						.then(response => response.json())
 						.then(json => {		
 							let sortedScores = getSortedScores(json);	
+							debugger
 							dispatch(receiveScores(sortedScores));
 						});
 									
@@ -102,7 +103,7 @@ export function receiveScores(scores) {
 export function addNewScore(state, action) {
 	let currentScores = state.scores
 	let name = state.players[action.player - 1].firstname
-	
+	debugger
 	currentScores.forEach (score => {
 		if(score.player == name) {
 			score.value = parseInt(score.value) + parseInt(action.value)
@@ -113,23 +114,25 @@ export function addNewScore(state, action) {
 }
 
 const getSortedScores = (data) => {
+	debugger
 	let players = data.scores;
-	let players_values = [];
+	let playersValues = [];
 	let reducedScore
 	let sortedScores = [];
 	
 	players.forEach((player, index, players) => {
 		if(player.scores.length > 0) {
 			player.scores.forEach((score, index, scores) => {
-				players_values.push(score.value)
+				playersValues.push(score.value)
 				
 			})
-			reducedScore = players_values.reduce((prev, curr) => prev + curr);
+			reducedScore = playersValues.reduce((prev, curr) => prev + curr);
 		} else {
 			reducedScore = [0];
 		}
 
 		sortedScores.push({player: player.name, value: reducedScore});
+		playersValues = []
 	});
 
 	return sortedScores.sort((a, b) => { return b.value - a.value;});

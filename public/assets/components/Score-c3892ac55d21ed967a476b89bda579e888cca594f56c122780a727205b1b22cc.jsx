@@ -1,10 +1,5 @@
 import React from 'react';
 
-
-const imagePath = (player) => {
-	return `/assets/profile_${player.toLowerCase()}.png`
-}
-
 const Score = ({
 	score
 }) => {

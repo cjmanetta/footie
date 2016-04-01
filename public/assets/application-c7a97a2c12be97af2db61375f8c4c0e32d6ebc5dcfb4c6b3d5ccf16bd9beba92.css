@@ -19,7 +19,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css);
 /* line 3, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
 body, .home {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.475) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.5) 100%) no-repeat center center fixed, url("grass.png");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.475) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.5) 100%) no-repeat center center fixed, url(/assets/grass.png);
 }
 
 /* line 6, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */

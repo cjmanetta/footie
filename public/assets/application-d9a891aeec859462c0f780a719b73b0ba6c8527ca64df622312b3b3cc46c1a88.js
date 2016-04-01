@@ -442,10 +442,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var imagePath = function imagePath(player) {
-	return "/assets/profile_" + player.toLowerCase() + ".png";
-};
-
 var Score = function Score(_ref) {
 	var score = _ref.score;
 

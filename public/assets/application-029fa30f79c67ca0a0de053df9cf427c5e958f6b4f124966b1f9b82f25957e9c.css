@@ -1,0 +1,219 @@
+/*
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600|Roboto+Slab:300);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css);
+/* line 3, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+body, .home {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.475) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.5) 100%) no-repeat center center fixed, url("grass.png");
+}
+
+/* line 6, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* line 13, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+.scores {
+  padding: 2%;
+}
+
+/* line 18, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+.ui.mini.image {
+  width: 50px;
+}
+
+/* line 23, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+html {
+  font-family: "Open Sans", sans-serif;
+  color: #50514c;
+}
+
+/* line 28, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+h1, h2, h3, h4, h6,
+input,
+label,
+.ui.dropdown,
+.ui.button,
+.extra,
+::-webkit-input-placeholder {
+  color: #50514c;
+  font-family: "Roboto Slab", serif;
+}
+
+/* line 39, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+.ui.button,
+.ui.checkbox {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+#landing {
+  justify-content: flex-start;
+  margin-top: 60px;
+}
+
+/* line 5, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.landing {
+  width: 400px;
+}
+
+/* line 12, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.ui.secondary.pointing.menu a.item, .ui.secondary.pointing.menu a.active.item {
+  font: bold 2em "Roboto Slab", serif;
+  color: white;
+}
+/* line 15, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.ui.secondary.pointing.menu a.item:hover, .ui.secondary.pointing.menu a.active.item:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+/* line 17, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.ui.secondary.pointing.menu .active.item:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.65);
+}
+/* line 19, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.ui.secondary.pointing.menu .active.item {
+  border-bottom: 3px solid white;
+}
+
+/* line 25, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.ui.bottom.attached.tab.segment {
+  border: 3px solid white;
+}
+/* line 27, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.ui.bottom.attached.tab.segment[data-tab="second"] {
+  border: 3px solid white;
+}
+
+/* line 35, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.ui.inverted.button {
+  background: #fff;
+  box-shadow: 0 0 0 2px #fff inset !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+/* line 39, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.ui.inverted.button:hover {
+  border: 1.5px solid white;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* line 47, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.login.ui.inverted.button {
+  border: 1.5px solid white;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+/* line 51, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.login.ui.inverted.button:hover {
+  background: #fff;
+  box-shadow: 0 0 0 2px #fff inset !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 56, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */
+.checkbox-label {
+  color: white !important;
+}
+
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_interface.sass */
+.ui.secondary.inverted.menu {
+  background-color: #50514c;
+  height: 85px;
+  margin-bottom: 0px;
+}
+
+/* line 7, /Users/charlotte/footie/app/assets/stylesheets/modules/_interface.sass */
+.ui.fluid.button {
+  border: 1.5px solid white;
+}
+
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+#dashboard {
+  justify-content: center;
+}
+
+/* line 4, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.scoreboard {
+  max-width: 400px;
+}
+/* line 6, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.scoreboard .headline-image {
+  margin-bottom: 24px;
+}
+/* line 8, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.scoreboard .ui.inverted.segment {
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 10, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.scoreboard .container {
+  height: 450px;
+  overflow: scroll;
+  margin-top: 5px;
+}
+
+/* line 17, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.new-score.middle.aligned.column {
+  max-width: 350px;
+}
+/* line 19, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.new-score.middle.aligned.column h2 {
+  color: white;
+}
+
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_nav.sass */
+nav {
+  padding-top: 5px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 50px;
+}
+/* line 10, /Users/charlotte/footie/app/assets/stylesheets/modules/_nav.sass */
+nav .nav-wrapper {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* line 15, /Users/charlotte/footie/app/assets/stylesheets/modules/_nav.sass */
+nav .logo {
+  height: 75px;
+}
+/* line 17, /Users/charlotte/footie/app/assets/stylesheets/modules/_nav.sass */
+nav h1 {
+  margin: 0;
+}
+/* line 19, /Users/charlotte/footie/app/assets/stylesheets/modules/_nav.sass */
+nav a {
+  color: white;
+  padding: 3px 10px 10px 10px;
+}
+/* line 22, /Users/charlotte/footie/app/assets/stylesheets/modules/_nav.sass */
+nav a:hover {
+  background-color: rgba(121, 123, 106, 0.2);
+  border-radius: 7px;
+  color: white;
+}

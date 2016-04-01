@@ -1,15 +1,9 @@
-.ui.grid.container 
-  .column  
-    width: 500px
-  
-  .logo
-    margin: 0px auto
-    background-image: url(footie_logo.svg)
-    width: 70px
-    height: 190px
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center center
+#landing
+  justify-content: flex-start
+  margin-top: 60px
+
+.landing  
+  width: 400px
 
   
 
@@ -19,9 +13,7 @@
     font: bold 2em $heading-font
     color: white
     &:hover  
-      color: $trans-white
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.8)
-  
+      color: $trans-white  
   .active.item:hover  
     border-bottom: 3px solid $trans-white
   .active.item  
@@ -56,10 +48,11 @@
   border: 1.5px solid white
   background: rgba(0, 0, 0, .2)
   color: white
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.8) !important
   &:hover 
     background: #fff
     box-shadow: 0 0 0 2px #fff inset!important
     color: rgba(0,0,0,.8)
-    
+
+.checkbox-label
+  color: white !important 
   

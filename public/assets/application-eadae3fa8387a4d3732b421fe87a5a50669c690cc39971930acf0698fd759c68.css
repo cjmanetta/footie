@@ -17,12 +17,12 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600|Roboto+Slab:300);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css);
-/* line 3, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+/* line 3, /Users/charlotte/footie/app/assets/stylesheets/_base.sass.erb */
 body, .home {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.475) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.5) 100%) no-repeat center center fixed, url(/assets/grass.png);
 }
 
-/* line 6, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+/* line 6, /Users/charlotte/footie/app/assets/stylesheets/_base.sass.erb */
 main {
   display: flex;
   flex-direction: column;
@@ -31,23 +31,23 @@ main {
   justify-content: space-around;
 }
 
-/* line 13, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+/* line 13, /Users/charlotte/footie/app/assets/stylesheets/_base.sass.erb */
 .scores {
   padding: 2%;
 }
 
-/* line 18, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+/* line 18, /Users/charlotte/footie/app/assets/stylesheets/_base.sass.erb */
 .ui.mini.image {
   width: 50px;
 }
 
-/* line 23, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+/* line 23, /Users/charlotte/footie/app/assets/stylesheets/_base.sass.erb */
 html {
   font-family: "Open Sans", sans-serif;
   color: #50514c;
 }
 
-/* line 28, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+/* line 28, /Users/charlotte/footie/app/assets/stylesheets/_base.sass.erb */
 h1, h2, h3, h4, h6,
 input,
 label,
@@ -59,7 +59,7 @@ label,
   font-family: "Roboto Slab", serif;
 }
 
-/* line 39, /Users/charlotte/footie/app/assets/stylesheets/_base.sass */
+/* line 39, /Users/charlotte/footie/app/assets/stylesheets/_base.sass.erb */
 .ui.button,
 .ui.checkbox {
   font-weight: bold;

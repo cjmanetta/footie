@@ -68,7 +68,7 @@ label,
 
 /* line 1, /Users/charlotte/footie/app/assets/stylesheets/_background.scss */
 body, .home {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.475) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.5) 100%) no-repeat center center fixed, url(/cjmanetta/footie/master/app/assets/images/grass.png);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.475) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.5) 100%) no-repeat center center fixed, url("https://raw.githubusercontent.com/cjmanetta/footie/master/app/assets/images/grass.png");
 }
 
 /* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing.sass */

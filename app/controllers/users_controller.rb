@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @players.each do |player|
       players_hash = { 
         "name" => player.firstname,
+        "photo" => photo_path(player.firstname),
         "scores" => player.scores.map {|score| {
           "id" => score.id, 
           "value" => score.value, 
@@ -60,5 +61,10 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:firstname, :lastname, :birthdate, :email, :admin, :username, :password_digest)
   end
+
+  def photo_path(player)
+      p ActionController::Base.helpers.image_path("profile_#{player.downcase}.png")
+  end
+
 end
 

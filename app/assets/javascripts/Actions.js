@@ -66,7 +66,7 @@ export function fetchScores() {
 						.then(response => response.json())
 						.then(json => {		
 							let sortedScores = getSortedScores(json);	
-						
+							
 							dispatch(receiveScores(sortedScores));
 						});
 									
@@ -130,11 +130,11 @@ const getSortedScores = (data) => {
 		} else {
 			reducedScore = [0];
 		}
-
-		sortedScores.push({player: player.name, value: reducedScore});
+		debugger
+		sortedScores.push({player: player.name, value: reducedScore, photo: player.photo});
 		playersValues = []
 	});
-
+	console.log(sortedScores)
 	return sortedScores.sort((a, b) => { return b.value - a.value;});
 	
 };

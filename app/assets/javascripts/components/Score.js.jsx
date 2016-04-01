@@ -11,7 +11,7 @@ const Score = ({
 	return (
 		<tr>
 			<td className="single line center aligned">
-				<img className="ui mini circular centered image" src={imagePath(score.player)} alt="profile photo"/>
+				<img className="ui mini circular centered image" src={score.photo} alt="profile photo"/>
 				<p className="extra">{score.player}</p>
 			</td>
 			<td className="single line center aligned">

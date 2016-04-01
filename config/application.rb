@@ -16,7 +16,8 @@ Bundler.require(*Rails.groups)
 module Footie
   class Application < Rails::Application
     config.sass.preferred_syntax = :sass
-    config.browserify_rails.commandline_options = '-t babelify'
+    config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 ] ]"
+
 
   end
 end

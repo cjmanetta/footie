@@ -25,7 +25,7 @@ class Scoreboard extends React.Component {
 		return (
 			<div className="ui inverted segment">
 				<img 
-					src="/assets/scoreboard.png" 
+					src={gon.scoreboardHeader} 
 					alt="scoreboard" 
 					className="headline-image ui fluid image"
 				/>

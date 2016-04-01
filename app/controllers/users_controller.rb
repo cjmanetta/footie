@@ -28,6 +28,7 @@ class UsersController < ApplicationController
     end
 
     gon.user_id = @user.id
+    gon.scoreboardHeader = scoreboard_header
 
 
     if request.xhr?
@@ -63,7 +64,11 @@ class UsersController < ApplicationController
   end
 
   def photo_path(player)
-      p ActionController::Base.helpers.image_path("profile_#{player.downcase}.png")
+    ActionController::Base.helpers.image_path("profile_#{player.downcase}.png")
+  end
+
+  def scoreboard_header
+    ActionController::Base.helpers.image_path("scoreboard.png")
   end
 
 end

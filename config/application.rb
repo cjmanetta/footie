@@ -17,7 +17,5 @@ module Footie
   class Application < Rails::Application
     config.sass.preferred_syntax = :sass
     config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 react ] ]"
-
-
   end
 end

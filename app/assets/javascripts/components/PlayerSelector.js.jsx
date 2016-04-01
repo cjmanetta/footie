@@ -41,6 +41,7 @@ class PlayerSelector extends React.Component {
 					});
 				}}
 				ref={node => { this.selection = node;}}
+				required
 				>
 				<option 
 					value="" 

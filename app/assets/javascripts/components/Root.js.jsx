@@ -12,3 +12,5 @@ ReactDOM.render(
 	</Provider>,
   document.querySelector('.scores')
 );
+
+export default Root;

@@ -10,13 +10,10 @@ gem 'font-awesome-sass'
 
 gem 'gon'
 
-
-gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 gem 'react-rails', '~> 1.6.0'
-gem "browserify-rails"
+gem "browserify-rails", '~> 3.0.1'
 
 gem "non-stupid-digest-assets"
 

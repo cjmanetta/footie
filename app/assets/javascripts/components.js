@@ -1,3 +1,1 @@
-//= require_tree ./components
-
-window.Root = require('./components/root.js.jsx');
+window.Root = require('./components/Root.js.jsx');

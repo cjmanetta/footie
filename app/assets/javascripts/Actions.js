@@ -130,11 +130,9 @@ const getSortedScores = (data) => {
 		} else {
 			reducedScore = [0];
 		}
-		debugger
 		sortedScores.push({player: player.name, value: reducedScore, photo: player.photo});
 		playersValues = []
 	});
-	console.log(sortedScores)
 	return sortedScores.sort((a, b) => { return b.value - a.value;});
 	
 };

@@ -1,7 +1,7 @@
 //= require_self
 //= require react-server
 //= require react_ujs
-//= require components
+//= require_tree ./components
 
 window.$ = window.jQuery = global.$ = require('jquery');
 require( 'jquery-ujs' );

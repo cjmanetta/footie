@@ -4,7 +4,7 @@ import ScoreForm from './scoreform.js.jsx';
 
  
 const Scores = () => (
-	<div>
+	<div className="ui two column stackable center aligned grid container">
 		<div className="scoreboard column">
 			<Scoreboard />
 		</div>

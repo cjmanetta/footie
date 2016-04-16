@@ -1,13 +1,3 @@
 <nav>
-  <div class="nav-wrapper">
-    <h1><a href="#">footie</a></h1>
     <%= image_tag('footie_logo.svg', class: 'logo')%>
-    <% if logged_in? %>
-    	<h1><%= link_to 'logout', logout_path %></h1>
-		<% elsif !logged_in? && !current_page?(user_path(7)) %>
-    	<h1><%= link_to 'login', root_path %></h1>
-    <% else %>
-    	<h1><%= link_to 'sign up', root_path %></h1>
-    <% end %>
-  </div>  
 </nav>

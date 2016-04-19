@@ -1,8 +1,47 @@
-old components
+<main id="landing">
+  <article class="info">
+    <h3>about footie</h3>
+    <p>Ask any youth coach what the best way to motivate their players is and they will tell you...</p>
+    <p class="callout"> "make it a competition"</p>
+    <p>So you start coming up with contests and prizes to incentivize your team to complete a certain goal. The problem now is that they expect you to actually be keeping track of their points and if they are over 8 they will call you on it if you get it wrong and thats just embarrasing.</p>
+    <p>I created footie to track every players points over time for any challlenge or task and update a scoreboard on the fly.</p>
+    <p>Footie is a points tracking application built in Rails and React for managing contests or player progress over the course of a sports season. I developed it initially as a personal project to help me manage a skills contest for the youth soccer team that I coach.</p>
+    
+    <%= link_to 'try it out', 'users/7', class: "ui fluid inverted button" %>
+  </article>
 
+  <article class="landing">
+    <div class="ui secondary pointing menu">
+      <a data-tab="first" class="item active">login</a>
+      <a data-tab="second" class="item">sign up</a>
+    </div>
 
-//= require_tree ./components
-/= require semantic
+    <article class="ui bottom attached active tab basic segment" data-tab="first">
+      <%= form_tag '/login', class: 'ui large form' do -%>
+      <div class="field">
+        <div class="ui corner labeled input">
+          <%= text_field_tag :username, nil, required: true, placeholder: 'username'  %>
+          <div class="ui corner label">
+            <i class="user icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui corner labeled input">
+          <%= password_field_tag :password, nil, placeholder: 'password' %>
+          <div class="ui corner label">
+            <i class="key icon"></i>
+          </div>
+        </div>
+      </div>
+      <%= submit_tag 'login', class: 'login ui fluid inverted button' %>
+      <% end %>
+    </article>
 
-$('.menu .item').tab();
-$('.ui.dropdown').dropdown();
+    <article class="ui bottom attached tab basic segment" data-tab="second">
+      <%= render 'users/new' %>
+    </article>
+
+    
+  </article>
+</main>

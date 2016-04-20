@@ -115,7 +115,7 @@ label,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 500px;
+  max-width: 525px;
 }
 /* line 50, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
 #landing h1, #landing h2 {
@@ -145,7 +145,7 @@ label,
 /* line 66, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
 #landing .tagline {
   color: #94CA9E;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Roboto Slab", serif;
   font-weight: 300;
 }

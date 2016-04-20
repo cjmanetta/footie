@@ -1,0 +1,258 @@
+/*
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,600|Roboto+Slab:300|Roboto+Condensed:300);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css);
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/_base2.sass */
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #3B3B3A;
+}
+
+/* line 6, /Users/charlotte/footie/app/assets/stylesheets/_base2.sass */
+body {
+  height: 100%;
+  background-color: #3B3B3A;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+/* line 14, /Users/charlotte/footie/app/assets/stylesheets/_base2.sass */
+h1, h2, h3, h4, h6,
+input,
+label,
+.ui.dropdown,
+.ui.button,
+.extra,
+::-webkit-input-placeholder {
+  color: #3B3B3A;
+  font-family: "Roboto Slab", serif;
+}
+
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+.ui.grid {
+  margin-top: 0px;
+}
+
+/* line 4, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 500px;
+  background-color: #3B3B3A;
+  background-position: center bottom;
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.65);
+  height: 400px;
+  font-size: 16px;
+  overflow: hidden;
+}
+/* line 16, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing p {
+  width: 80%;
+}
+@media only screen and (max-width: 1024px) {
+  /* line 4, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+  #landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: initial;
+  }
+}
+/* line 23, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .cta-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 550px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}
+@media only screen and (max-width: 1024px) {
+  /* line 23, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+  #landing .cta-container {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: 250px;
+    margin-bottom: 30px;
+    padding: 0px;
+  }
+}
+/* line 40, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .cta-container .clip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 43, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .blurb-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+/* line 50, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing h1, #landing h2 {
+  color: white;
+}
+/* line 53, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 3em;
+}
+@media(max-width: 475px) {
+  /* line 53, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+  #landing h2 {
+    font-size: 2em;
+  }
+}
+/* line 61, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing h3, #landing p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+/* line 64, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing h3 {
+  color: #94CA9E;
+}
+/* line 66, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .tagline {
+  color: #94CA9E;
+  font-size: 14px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+/* line 71, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .cta {
+  width: 150px;
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 15px;
+  font-weight: 300;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+/* line 79, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .ui.inverted.button {
+  box-shadow: 0 0 0 1px #94CA9E inset !important;
+  background: 0 0;
+  color: #94CA9E;
+  text-shadow: none !important;
+}
+/* line 84, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .ui.inverted.button:hover {
+  box-shadow: 0 0 0 1px #94CA9E inset !important;
+  background: #94CA9E;
+  color: #3B3B3A;
+}
+/* line 89, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .callout {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  color: #94CA9E;
+}
+@media only screen and (max-width: 475px) {
+  /* line 89, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+  #landing .callout {
+    font-size: 1.1em;
+  }
+}
+/* line 96, /Users/charlotte/footie/app/assets/stylesheets/modules/_landing2.sass */
+#landing .callout .quote.left.icon, #landing .callout .quote.right.icon {
+  color: rgba(0, 0, 0, 0.15);
+}
+
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* line 5, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.scoreboard {
+  max-width: 400px;
+}
+/* line 7, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.scoreboard .headline-image {
+  margin-bottom: 24px;
+}
+/* line 9, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.scoreboard .ui.inverted.segment {
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 11, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.scoreboard .container {
+  height: 350px;
+  overflow: scroll;
+  margin-top: 5px;
+}
+
+/* line 18, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.new-score.middle.aligned.column {
+  max-width: 350px;
+}
+/* line 20, /Users/charlotte/footie/app/assets/stylesheets/modules/_scoreboard.sass */
+.new-score.middle.aligned.column h2 {
+  color: white;
+}
+
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_nav2.sass */
+nav {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.475) 0%, rgba(0, 0, 0, 0.5) 100%), url("grass.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 12, /Users/charlotte/footie/app/assets/stylesheets/modules/_nav2.sass */
+.logo {
+  height: 60%;
+}
+
+/* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+footer {
+  background-image: url(pattern.svg);
+  background-color: rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center bottom;
+  height: 200px;
+}
+@media only screen and (max-width: 1024px) {
+  /* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+  footer {
+    margin-top: 30px;
+  }
+}

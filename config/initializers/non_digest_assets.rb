@@ -1,0 +1,1 @@
+NonStupidDigestAssets.whitelist += ["pattern.svg", "grass.jpg"]

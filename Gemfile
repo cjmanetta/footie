@@ -14,6 +14,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 gem 'react-rails', '~> 1.6.0'
 gem "browserify-rails", '~> 3.0.1'
+gem "non-stupid-digest-assets"
 
 
 group :development, :test  do

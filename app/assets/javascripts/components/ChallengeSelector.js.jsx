@@ -38,6 +38,7 @@ class ChallengeSelector extends React.Component {
 					});
 				}}
 				ref={node => { this.selection = node;}}
+				required
 				>
 				<option 
 					value="" ref={node => { this.defaultSelection = node;}}

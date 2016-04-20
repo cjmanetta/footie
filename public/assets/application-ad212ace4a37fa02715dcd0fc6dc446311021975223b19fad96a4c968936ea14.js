@@ -301,7 +301,8 @@ var ChallengeSelector = function (_React$Component) {
 					},
 					ref: function ref(node) {
 						_this3.selection = node;
-					}
+					},
+					required: true
 				},
 				_react2.default.createElement(
 					'option',
@@ -410,7 +411,8 @@ var PlayerSelector = function (_React$Component) {
 					},
 					ref: function ref(node) {
 						_this3.selection = node;
-					}
+					},
+					required: true
 				},
 				_react2.default.createElement(
 					'option',
@@ -694,7 +696,8 @@ var ScoreForm = function (_React$Component) {
 							ref: function ref(node) {
 								input = node;
 							},
-							placeholder: 'points'
+							placeholder: 'points',
+							required: true
 						}),
 						_react2.default.createElement(
 							'button',

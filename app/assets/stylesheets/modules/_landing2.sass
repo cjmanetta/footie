@@ -1,0 +1,98 @@
+.ui.grid
+	margin-top: 0px
+
+#landing
+	+flexbox(row, center)
+	width: 100%
+	min-height: 500px
+	background:
+		color: $dark-color
+		position: center bottom
+		size: cover
+	color: $trans-white
+	height: 400px
+	font-size: 16px
+	overflow: hidden
+	p
+		width: 80%
+
+	@media #{$medium}
+		+flexbox(column)
+		overflow: initial
+	
+	.cta-container
+		+flexbox(column)
+		width: 550px
+		height: 550px
+		background: $trans-dark
+		-webkit-clip-path: circle(50% at 50% 50%)
+		clip-path: circle(50% at 50% 50%)
+
+		@media #{$medium}
+			width: 100%
+			background: $trans-dark
+			-webkit-clip-path: none
+			clip-path: none
+			height: 250px
+			margin-bottom: 30px
+			padding: 0px
+
+		.clip
+			+flexbox(column)
+			
+	.blurb-container
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		max-width: 500px
+
+	h1, h2
+		color: white
+
+	h2
+		font-family: $heading-font
+		font-weight: 300
+		font-size: 3em
+		@media(max-width: 475px)
+			font-size: 2em
+
+
+	h3, p 
+		font-family: $main-font
+		font-weight: 300
+	h3
+		color: $green
+	.tagline
+		color: $green
+		font-size: 14px
+		font-family: $heading-font
+		font-weight: 300		
+	.cta
+		width: 150px
+		font-size: 20px
+		font-family: $button-font
+		padding: 15px
+		font-weight: 300
+		margin-top: 10px
+		letter-spacing: 1px
+	.ui.inverted.button
+		box-shadow: 0 0 0 1px $green inset!important
+		background: 0 0
+		color: $green
+		text-shadow: none!important
+		&:hover 
+			box-shadow: 0 0 0 1px $green inset!important
+			background: $green
+			color: $dark-color
+
+	.callout
+		font-family: $heading-font
+		font-size: 24px
+		color: $green
+		@media #{$small}
+			font-size: 1.1em
+
+		.quote.left.icon, .quote.right.icon
+			color: rgba(0, 0, 0, 0.15)
+

@@ -244,11 +244,41 @@ nav {
 
 /* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-image: url(pattern.svg);
   background-color: rgba(0, 0, 0, 0.1);
   background-size: cover;
   background-position: center bottom;
   height: 300px;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 100px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+}
+/* line 15, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+footer p {
+  align-self: flex-end;
+}
+/* line 17, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+footer ul {
+  list-style: none;
+}
+/* line 19, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+footer ul a {
+  color: rgba(255, 255, 255, 0.3);
+}
+/* line 21, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+footer ul a:hover {
+  color: #94CA9E;
+}
+/* line 23, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+footer ul li:first-child {
+  color: rgba(148, 202, 158, 0.5);
 }
 @media only screen and (max-width: 1024px) {
   /* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */

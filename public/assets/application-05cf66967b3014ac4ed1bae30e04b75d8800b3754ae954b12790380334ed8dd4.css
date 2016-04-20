@@ -267,22 +267,34 @@ footer p {
 /* line 17, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
 footer ul {
   list-style: none;
+  padding-left: 0px;
 }
-/* line 19, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+/* line 20, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
 footer ul a {
   color: rgba(255, 255, 255, 0.3);
 }
-/* line 21, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+/* line 22, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
 footer ul a:hover {
   color: #94CA9E;
 }
-/* line 23, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+/* line 24, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
 footer ul li:first-child {
   color: rgba(148, 202, 158, 0.5);
+  text-align: center;
+  padding-left: 0px;
 }
 @media only screen and (max-width: 1024px) {
   /* line 1, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
   footer {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* line 34, /Users/charlotte/footie/app/assets/stylesheets/modules/_footer.sass */
+  footer p {
+    align-self: auto;
   }
 }

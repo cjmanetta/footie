@@ -3,11 +3,20 @@ nav
 		image: linear-gradient(to bottom, rgba(0, 0, 0, 0.475) 0%, rgba(0, 0, 0, 0.5) 100%), url("grass.jpg")
 		position: center bottom
 		size: cover
-	height: 350px
+	height: 200px
 	display: flex
-	justify-content: center
+	justify-content: flex-end
 	align-items: center
 
 
 .logo
-	height: 60%
+	// width: 40%
+	margin-right: 40px
+	max-width: 600px
+
+@media #{$small}
+	nav
+		justify-content: center
+		.logo
+			width: 40%
+			margin-right: 0px

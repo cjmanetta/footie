@@ -11,5 +11,8 @@ node_modules
 !/log/.keep
 /tmp
 
+#ignore public precompiled assets
+/public/assets/*
+
 
 scratch

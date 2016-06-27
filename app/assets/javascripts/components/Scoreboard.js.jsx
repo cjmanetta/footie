@@ -1,6 +1,6 @@
 import React from 'react';
-import ScoresList from './scoreslist.js.jsx';
-import { getSortedScores, fetchScores } from '../actions';
+import ScoresList from './Scoreslist.js.jsx';
+import { getSortedScores, fetchScores } from '../Actions.js';
 
 class Scoreboard extends React.Component {
 

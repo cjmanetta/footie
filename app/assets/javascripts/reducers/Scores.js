@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { addNewScore, postScore } from '../actions';
+import { addNewScore, postScore } from '../Actions.js';
 import ReduxThunk from 'redux-thunk';
 
 const score = (state, action) => {

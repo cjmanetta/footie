@@ -1,6 +1,6 @@
 import React from 'react';
-import PlayerSelector from './playerselector.js.jsx';
-import ChallengeSelector from './challengeselector.js.jsx';
+import PlayerSelector from './Playerselector.js.jsx';
+import ChallengeSelector from './Challengeselector.js.jsx';
 
 
 let nextScoreId = 1;

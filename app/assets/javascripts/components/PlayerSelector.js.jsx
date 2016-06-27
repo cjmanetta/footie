@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchPlayers } from '../actions';
+import { fetchPlayers } from '../Actions.js';
 
 
 class PlayerSelector extends React.Component {

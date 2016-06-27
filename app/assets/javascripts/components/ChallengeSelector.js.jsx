@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchChallenges } from '../actions';
+import { fetchChallenges } from '../Actions.js';
 
 class ChallengeSelector extends React.Component {
 

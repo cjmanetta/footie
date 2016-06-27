@@ -1,6 +1,6 @@
 import React from 'react';
-import Scoreboard from './scoreboard.js.jsx';
-import ScoreForm from './scoreform.js.jsx';
+import Scoreboard from './Scoreboard.js.jsx';
+import ScoreForm from './Scoreform.js.jsx';
 
  
 const Scores = () => (

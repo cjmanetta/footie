@@ -1,5 +1,5 @@
 import React from 'react';
-import Score from './score.js.jsx';
+import Score from './Score.js.jsx';
 
 let nextSortedScoreId = 0;
 

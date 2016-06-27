@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import ScoresApp from './reducers/scores';
+import ScoresApp from './reducers/Scores.js';
 import thunkMiddleware from 'redux-thunk';
 
 export default function configureStore(initialState) {

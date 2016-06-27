@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import configureStore from '../store';
+import configureStore from '../Store.js';
 import Scores from './scores.js.jsx';
 
 const store = configureStore();

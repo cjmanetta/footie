@@ -47,7 +47,7 @@ class PlayerSelector extends React.Component {
 					value="" 
 					ref={node => { this.defaultSelection = node;}}
 					className="default text">
-					select a player
+					SELECT A PLAYER
 				</option>
 				{players}
 			</select>

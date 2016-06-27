@@ -43,7 +43,7 @@ class ChallengeSelector extends React.Component {
 				<option 
 					value="" ref={node => { this.defaultSelection = node;}}
 					className="default text">
-					select a challenge
+					SELECT A CHALLENGE
 					</option>
 				{challenges}
 			</select>

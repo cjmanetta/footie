@@ -64,7 +64,7 @@ class ScoreForm extends React.Component {
 						<input 
 							type="number" 
 							ref={node => {input = node;}}
-							placeholder="points"
+							placeholder="POINTS"
 							required
 						/>
 						<button

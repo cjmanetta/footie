@@ -47,8 +47,11 @@
 		align-items: center
 		max-width: 525px
 
+		@media #{$medium}
+			margin-top: 30px
+
 	h1, h2
-		color: white
+		color: $trans-white
 
 	h2
 		font-family: $heading-font
@@ -65,7 +68,7 @@
 		color: $green
 	.tagline
 		color: $green
-		font-size: 16px
+		font-size: 18px
 		font-family: $heading-font
 		font-weight: 300		
 	.cta
@@ -81,6 +84,7 @@
 		background: 0 0
 		color: $green
 		text-shadow: none!important
+		font-family: $heading-font
 		&:hover 
 			box-shadow: 0 0 0 1px $green inset!important
 			background: $green

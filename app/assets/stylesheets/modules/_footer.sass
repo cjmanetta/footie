@@ -1,7 +1,7 @@
 footer
 	+flexbox(row, space-between)
 	background:
-		image: url(pattern1.svg)
+		image: url(pattern2.svg)
 		size: cover
 		position: center bottom
 	height: 300px
@@ -9,7 +9,7 @@ footer
 	padding: 100px
 	font-family: $heading-font
 	font-weight: 300
-	font-size: 12px
+	font-size: 16px
 	line-height: 20px
 	p
 		align-self: flex-end
@@ -18,6 +18,7 @@ footer
 		padding-left: 0px
 		a
 			color: $lt-trans-white
+			font-family: $main-font
 			&:hover
 				color: $green
 		li:first-child
@@ -27,7 +28,7 @@ footer
 
 
 	@media #{$medium}
-		margin-top: 30px
+		margin-top: 60px
 		+flexbox(column)
 		text-align: center
 		p

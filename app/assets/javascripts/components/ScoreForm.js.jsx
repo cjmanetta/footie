@@ -47,7 +47,8 @@ class ScoreForm extends React.Component {
 							});
 					clearForm();
 				}}>
-				<h2>add points</h2>
+				<h2>ADD POINTS</h2>
+				<p>Just choose a player and a challenge and enter points. You can even go negative if you are feeling ornery</p>
 				<div className="field">
 					<PlayerSelector 
 						ref={node => {playerSelector = node}}

@@ -7,7 +7,7 @@ const Score = ({
 		<tr>
 			<td className="single line center aligned">
 				<img className="ui mini circular centered image" src={score.photo} alt="profile photo"/>
-				<p className="extra">{score.player}</p>
+				<p className="extra">{score.player.toUpperCase()}</p>
 			</td>
 			<td className="single line center aligned">
 				<h1>{score.value}</h1>

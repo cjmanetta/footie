@@ -47,7 +47,7 @@ class ScoreForm extends React.Component {
 							});
 					clearForm();
 				}}>
-				<h2>add a score</h2>
+				<h2>add points</h2>
 				<div className="field">
 					<PlayerSelector 
 						ref={node => {playerSelector = node}}
